@@ -1,0 +1,215 @@
+/* =======================================================
+============================================================== 
+General Info:
+- Each page is built using a Grid containing "Navbar", "Main", "Footer"
+- "Navbar" and "Footer" are styled once and are the same for all pages
+- The "Main" part is styled individually for each page using nested Grids
+- Each page is styled for a width smaller and larger than 800px (mobile and desktop)
+==============================================================
+======================================================= */
+
+/*
+==============================================================
+Fonts
+==============================================================
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+/* @import url('https://css.gg/css'); */
+
+/*
+==============================================================
+Variables
+==============================================================
+*/
+
+:root {
+  /* dark main color*/
+  --clr-primary-1: #0d0630;
+  /* lighter shade of main color */
+  --clr-primary-1-light: #271291;
+  /* light green/ background */
+  --clr-primary-2: #cfefd8;
+  /* middle green */
+  --clr-primary-3: #93e5ab;
+  /* dark green */
+  --clr-primary-4: #8bbeb2;
+  /* red */
+  --clr-primary-5: #c97064;
+  /* yellow */
+  --clr-primary-6: #e6f9af;
+  /* white */
+  --clr-white: #fff;
+  /* light grey */
+  --clr-lightgrey: #f5f5f5;
+  /* other variables */
+  --ff-primary: "Sukhumvit Set", sans-serif;
+  --transition: all 0.3s linear;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1920px;
+}
+
+/*
+==============================================================
+Global Styles
+==============================================================
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-white);
+  color: var(--clr-primary-1);
+  font-size: 1rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+
+/*
+==============================================================
+Navbar
+==============================================================
+*/
+
+.nav {
+  background: var(--clr-primary-2);
+  height: 3rem;
+  display: grid;
+  align-items: center;
+}
+  .nav-links {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 3rem;
+    justify-self: end;
+    padding-right: 3rem;
+  }
+  .nav-links a {
+    text-transform: capitalize;
+    color: var(--clr-primary-1);
+    font-weight: bold;
+    letter-spacing: var(--spacing);
+  }
+  .nav-links a:hover {
+    color: var(--clr-primary-1-light);
+  }
+
+/*
+==============================================================
+Footer
+==============================================================
+*/
+
+.footer {
+  height: 2rem;
+  display: grid;
+  text-align: center;
+}
+
+/* =======================================================
+============================================================== 
+Index Html
+==============================================================
+======================================================= */
+
+.main {
+  background: var(--clr-white);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header1"
+    "logo"
+    "buttons";
+  justify-items: center;
+}
+
+.header1{
+  grid-area: header1;
+  margin: 1rem;
+}
+#logo{
+  grid-area: logo;
+  height: 20rem;
+  width: 20rem;
+  max-width: 90vw;
+  padding: 1rem;
+  border: 1px solid;
+  border-color: var(--clr-primary-2);
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+}
+.buttons{
+  grid-area: buttons;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+  "btn1"
+  "btn2"
+  "btn3"
+  "btn4"
+  "btn5";
+}
+.btn {
+  text-transform: uppercase;
+
+  color: var(--clr-primary-1);
+  margin: 0.5rem;
+  letter-spacing: var(--spacing);
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  min-width: 20rem;
+  padding: 0.5rem;
+}
+.btn:hover {
+  border: 2px solid var(--clr-primary-1);
+}
+#btn1{
+  background: var(--clr-primary-5);
+}
+#btn2{
+  background: #E4B9B4;
+}
+#btn4{
+  background: var(--clr-primary-2);
+}
+#btn5{
+  background: var(--clr-primary-3);
+}
+
+@media screen and (min-width: 800px) {
+  .buttons{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "btn1 btn2 btn3 btn4 btn5";
+  }
+  .btn{
+    width: None;
+    min-width: 9rem;
+  }
+  #logo{
+    height: 30rem;
+    width: 30rem;
+  }
+}
