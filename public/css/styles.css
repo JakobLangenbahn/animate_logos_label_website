@@ -129,12 +129,11 @@ Index Html
   background: var(--clr-white);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
     "header1"
     "logo"
-    "buttons"
-    "name-form";
+    "buttons";
   justify-items: center;
 }
 
@@ -145,7 +144,7 @@ Index Html
 #logo{
   grid-area: logo;
   height: 20rem;
-  width: 20rem;
+  width: auto;
   max-width: 90vw;
   padding: 1rem;
   border: 1px solid;
@@ -158,13 +157,14 @@ Index Html
   margin-bottom: 0.5rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   grid-template-areas:
   "btn1"
   "btn2"
   "btn3"
   "btn4"
-  "btn5";
+  "btn5"
+  "alias";
 }
 .btn {
   text-transform: uppercase;
@@ -195,33 +195,22 @@ Index Html
 #btn5{
   background: var(--clr-primary-3);
 }
-#name-form{
-  grid-area: name-form;
-  align-items: center;
+#alias{
+  grid-area: alias;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-    "name name-submit";
-}
-#name{
-  grid-area: name;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border-radius: var(--radius)
-}
-#name-submit{
-  grid-area: name-submit;
-  min-width: 0rem;
+  border: 2px solid var(--clr-primary-1);
+  cursor: text;
+  justify-self: center;
 }
 
 @media screen and (min-width: 800px) {
   .buttons{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
-      "btn1 btn2 btn3 btn4 btn5";
+      "btn1 btn2 btn3 btn4 btn5"
+      "alias alias alias alias alias";
   }
   .btn{
     width: None;
@@ -229,7 +218,7 @@ Index Html
   }
   #logo{
     height: 30rem;
-    width: 30rem;
+    width: auto;
   }
 }
 
@@ -239,7 +228,7 @@ Highscores
 ==============================================================
 ======================================================= */
 
-#highscores{
+#table_highscore{
   margin: 1rem;
   table-layout: auto;
 }
