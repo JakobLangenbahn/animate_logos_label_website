@@ -1,47 +1,24 @@
-function updateHighscore(items) {
-    var table = document.getElementById('highscores');
-    // Delete old entries
-    var tableHeaderRowCount = 1;
-    var rowCount = table.rows.length;
-    for (var i = tableHeaderRowCount; i < rowCount; i++) {
-        table.deleteRow(tableHeaderRowCount);
-    }
-    // insert rows with new entries
-    items.forEach((item) => {
-    let row = table.insertRow();
-    let name = row.insertCell(0);
-    name.innerHTML = item.name;
-    let score = row.insertCell(1);
-    score.innerHTML = item.score;
-    });
-    // sort table according to score
-    var rows, switching, i, x, y, shouldSwitch;
-    switching = true;
-    while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("td")[1];
-            y = rows[i + 1].getElementsByTagName("td")[1];
-            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            shouldSwitch = true;
-            break;
-            }
-        }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
-    }
-}
+var db = firebase.firestore();
+db.collection('highscore').orderBy("score", "desc").limit(10).get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        renderAccount(doc);
+    })
+})
 
-// Test data
-const testdata = [
-    { name: "Becci", score: 80 },
-    { name: "Jani", score: 50 },
-    { name: "Jakob", score: 80 },
-    { name: "Jonathan", score: 30 },
-    { name: "Sarah", score: 40 },
-    { name: "Tim", score: 70 },
-    ];
+const accountList = document.querySelector('#table_highscore');
+
+function renderAccount(doc) {
+    let tr = document.createElement('tr');
+    let td_alias = document.createElement('td');
+    let td_score = document.createElement('td');
+
+    tr.setAttribute('data-id', doc.id);
+    td_alias.textContent = doc.data().alias;
+    td_score.textContent = doc.data().score;
+
+    tr.appendChild(td_alias);
+    tr.appendChild(td_score);
+
+    accountList.appendChild(tr);
+
+}

@@ -5,76 +5,52 @@
 
 <head>
 
-  <!-- data layer -->
-  <script>
-    dataLayer = [];
-  </script>
-
-  <!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
-  <script type="text/javascript"
-    src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"></script>
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-      cookieconsent.run({
-        notice_banner_type: "headline",
-        consent_type: "express",
-        palette: "light",
-        language: "en",
-        website_name: "Studomo.com",
-        cookies_policy_url:
-          "https://studomo.com/Data-Protection-Declaration.html",
-        change_preferences_selector: "#changePreferences",
-      });
-    });
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script type="text/plain" cookie-consent="tracking">
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-MCSJD8M');
+    <!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+    <script src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            cookieconsent.run({
+                notice_banner_type: "headline",
+                consent_type: "express",
+                palette: "light",
+                language: "en",
+                website_name: "Studomo.com",
+                cookies_policy_url:
+                    "https://studomo.com/Data-Protection-Declaration.html",
+                change_preferences_selector: "#changePreferences",
+            });
+        });
     </script>
 
-  <noscript>Cookie Consent by
-    <a href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
-      rel="nofollow noopener">FreePrivacyPolicy.com</a></noscript>
-  <!-- End Cookie Consent -->
+    <noscript>Cookie Consent by
+        <a href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
+           rel="nofollow noopener">FreePrivacyPolicy.com</a></noscript>
+    <!-- End Cookie Consent -->
 
-  <!-- import css -->
-  <link rel="stylesheet" href="./css/styles.css" />
+    <!-- import css -->
+    <link href="./css/styles.css" rel="stylesheet"/>
 
-  <!-- import fontawesome -->
-  <script src="https://kit.fontawesome.com/644da155ca.js" crossorigin="anonymous"></script>
+    <!-- import fontawesome -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/644da155ca.js"></script>
 
-  <!-- import tab icon -->
-  <link rel="shortcut icon"
-    href="https://firebasestorage.googleapis.com/v0/b/studomo-university.appspot.com/o/Logo_tab.png?alt=media&token=e12019d5-5f76-426f-8432-7ef7929f2ee1"
-    type="image/x-icon" />
 
-  <!-- general settings -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logo Animation || Home</title>
-  <meta name="description"
-    content="Find out more about your chances to get admitted to study programs at your dream universities. Get started and search for your desired Bachelor/ Master program!" />
+    <!-- general settings -->
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Logo Animation || Home</title>
+    <meta content="Find out more about your chances to get admitted to study programs at your dream universities. Get started and search for your desired Bachelor/ Master program!"
+          name="description"/>
 
-  <!-- prevent duplicate with homepage -->
-  <link rel="canonical" href="https://studomo.com/" />
+    <!-- prevent duplicate with homepage -->
+    <link href="https://studomo.com/" rel="canonical"/>
 </head>
-
 
 
 <!-- html body -->
 
 
-
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCSJD8M" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe></noscript>
-
 
 
 <div class="overall-page">
@@ -82,55 +58,53 @@
     <!-- navbar -->
     <nav class="nav" id="nav">
         <ul class="nav-links">
-          <li>
-            <a href="index.html" id="index-link">Home</a>
-          </li>
-          <li>
-            <a href="highscores.html" id="highscores-link">Highscores</a>
-          </li>
-          <li>
-            <a href="aboutUs.html" id="about-page-link">About</a>
-          </li>
+            <li>
+                <a href="index.html" id="index-link">Home</a>
+            </li>
+            <li>
+                <a href="highscores.html" id="highscores-link">Highscores</a>
+            </li>
+            <li>
+                <a href="aboutUs.html" id="about-page-link">About</a>
+            </li>
         </ul>
     </nav>
 
     <!-- page content-->
     <div class="main">
-    <h2 class="header1">
-      How do you like this animation?
-    </h2>
-    <img id="logo" src="images/Logo.svg"> 
-    <span class="buttons" >
-    <button type="button" class="btn" id="btn1">Very bad</button>
-    <button type="button" class="btn" id="btn2">Bad</button>
-    <button type="button" class="btn" id="btn3">Okay</button>
-    <button type="button" class="btn" id="btn4">Good</button>
-    <button type="button" class="btn" id="btn5">Very good</button>
-  </span>
-  <span id="name-form">
-  <form>
-    <input type="text" placeholder="Your Name" class="form" id="name"><br>
-  </form>
-    <button type="submit" form="name" value="Submit" class="btn" id="name-submit">Submit</button>
-  </span>
-  </div>
+        <h2 class="header1">
+            How do you like this animation?
+        </h2>
+        <img id="logo" src="images/Logo.svg">
+        <span id="name-form">
+        <form>
+            <input class="form" id="alias" placeholder="Your Name" type="text"><br>
+            <button class="btn" id="btn1" onclick="add_label_very_bad(animation_file);" type="button">Very bad</button>
+            <button class="btn" id="btn2" onclick="add_label_bad(animation_file);" type="button">Bad</button>
+            <button class="btn" id="btn3" onclick="add_label_okay(animation_file);" type="button">Okay</button>
+            <button class="btn" id="btn4" onclick="add_label_good(animation_file);" type="button">Good</button>
+            <button class="btn" id="btn5" onclick="add_label_very_good(animation_file);" type="button">Very good</button>
+        </form>
+    </span>
 
-  </div>
+    </div>
 
 
+    <!-- JavaScript -->
 
-  <!-- JavaScript -->
+    <!-- Import Firebase -->
+    <script src="/__/firebase/8.2.10/firebase-app.js"></script>
 
-  <!-- ImportFirebase -->
-  <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+    <!-- Add SDKs for Firebase products -->
+    <script src="/__/firebase/8.2.10/firebase-storage.js"></script>
+    <script src="/__/firebase/8.2.10/firebase-firestore.js"></script>
 
-  <!-- Add SDKs for Firebase products -->
-  <script src="/__/firebase/7.19.1/firebase-storage.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
 
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
-
-  <!-- page JavaScript -->
+    <!-- page javascript -->
+    <script src="./js/index.js"></script>
+</div>
 </body>
 
 </html>
