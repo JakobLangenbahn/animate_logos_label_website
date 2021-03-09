@@ -1,11 +1,18 @@
-rules_version = '2';
+rules_version = '3';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /universities/{document=**} {
-      allow get: if false;
-      allow list: if request.query.limit == 8;
-   		allow create: if request.resource.data.Rand1 ==  "4387372082231332388733806495239901444332746126643305864164850450947350098742327567353600860660692796";
-      allow update, delete: if false;
+    match /{document=**} {
+      allow read, write: if
+          request.time < timestamp.date(2021, 4, 5);
     }
   }
 }
+
+service firebase.storage {
+  match / b / {bucket} / o {
+  match / {allPaths = **} {
+  allow read, write: if request.auth != null;
+      }
+    }
+  }
+
