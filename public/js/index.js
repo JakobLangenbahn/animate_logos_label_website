@@ -14,48 +14,57 @@ storage.ref(animation_file).getDownloadURL()
 
 
 function add_label_very_bad(animation_file) {
+    var alias = document.getElementById("alias").value;
     db.collection("label").doc().set({
         logo: animation_file,
-        rating: "Very Bad"
+        rating: "Very Bad",
+        alias: alias
     })
-    update_highscore_load_new_image()
+    update_highscore_load_new_image(alias)
 }
 
-function add_label_bad(animation_file ) {
+function add_label_bad(animation_file) {
+    var alias = document.getElementById("alias").value;
     db.collection("label").doc().set({
         logo: animation_file,
-        rating: "Bad"
+        rating: "Bad",
+        alias: alias
     })
-    update_highscore_load_new_image()
+    update_highscore_load_new_image(alias)
 }
 
-function add_label_okay(animation_file ) {
+function add_label_okay(animation_file) {
+    var alias = document.getElementById("alias").value;
     db.collection("label").doc().set({
         logo: animation_file,
-        rating: "Okay"
+        rating: "Okay",
+        alias: alias
     })
-    update_highscore_load_new_image()
+    update_highscore_load_new_image(alias)
 }
 
-function add_label_good(animation_file ) {
+function add_label_good(animation_file) {
+    var alias = document.getElementById("alias").value;
     db.collection("label").doc().set({
         logo: animation_file,
-        rating: "Good"
+        rating: "Good",
+        alias: alias
     })
-    update_highscore_load_new_image()
+    update_highscore_load_new_image(alias)
 }
 
-function add_label_very_good(animation_file ) {
+function add_label_very_good(animation_file) {
+    var alias = document.getElementById("alias").value;
     db.collection("label").doc().set({
         logo: animation_file,
-        rating: "Very Good"
+        rating: "Very Good",
+        alias: alias
     })
-    update_highscore_load_new_image()
+    update_highscore_load_new_image(alias)
 }
 
 // update highscore
-function update_highscore_load_new_image() {
-    var alias = document.getElementById("alias").value;
+function update_highscore_load_new_image(alias) {
     const increment = firebase.firestore.FieldValue.increment(1);
     const storyRef = db.collection('highscore').doc(alias);
     storyRef.set({score: increment, alias: alias}, {merge: true});
