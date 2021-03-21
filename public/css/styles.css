@@ -95,6 +95,8 @@ Navbar
   grid-template-columns: auto auto auto auto;
   column-gap: 3rem;
   justify-self: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
   }
 .nav-links a {
   text-transform: capitalize;
@@ -111,20 +113,11 @@ Navbar
       column-gap: 3rem;
       justify-self: end;
       padding-right: 3rem;
+      margin: 0;
       }
   }
 
-/*
-==============================================================
-Footer
-==============================================================
-*/
 
-.footer {
-  height: 2rem;
-  display: grid;
-  text-align: center;
-}
 
 /* =======================================================
 ============================================================== 
@@ -243,7 +236,7 @@ Path Selection
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header1"
-    "logo_pathselection"
+    "logo_full"
     "buttons_pathselection"
     "explanation_pathselection";
   justify-items: center;
@@ -253,9 +246,9 @@ Path Selection
   grid-area: header1;
   margin: 1rem;
 }
-#logo_pathselection{
-  grid-area: logo_pathselection;
-  height: 11rem;
+#logo_full{
+  grid-area: logo_full;
+  height: 10rem;
   width: auto;
   max-width: 90vw;
   padding: 0.5rem;
@@ -268,23 +261,37 @@ Path Selection
   grid-area: buttons_pathselection;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-  "btn1_pathselection btn2_pathselection"
-  "btn3_pathselection btn4_pathselection"
-  "btn5_pathselection btn6_pathselection"
-  "btn7_pathselection btn8_pathselection";
+  "path1 path2"
+  "path3 path4"
+  "path5 path6"
+  "path7 path8"
+  "alias-submit alias-submit";
+  justify-items: center;
+}
+#alias-submit{
+  grid-area: alias-submit;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+  "send"
+  "alias";
+  justify-self: center;
 }
 .btn_pathselection {
-  margin: 0.5rem;
   border: 2px solid transparent;
   cursor: pointer;
-  height: 10rem;
-  width: 10rem;
+  height: 9rem;
+  width: 9rem;
   background: transparent;
   position:relative;
 }
 .btn_pathselection:hover {
+  border: 2px solid var(--clr-primary-1);
+}
+.btn:active{
   border: 2px solid var(--clr-primary-1);
 }
 .btn_pathselection img {
@@ -307,14 +314,24 @@ Path Selection
   .buttons_pathselection{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-    "btn1_pathselection btn2_pathselection btn3_pathselection btn4_pathselection"
-    "btn5_pathselection btn6_pathselection btn7_pathselection btn8_pathselection";
+    "path1 path2 path3 path4"
+    "path5 path6 path7 path8"
+    "alias-submit alias-submit alias-submit alias-submit";
   }
   .btn_pathselection{
     width: None;
     min-width: 9rem;
+  }
+  #alias-submit{
+    grid-area: alias-submit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "alias send";
+    justify-self: center;
   }
 }
 

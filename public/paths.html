@@ -83,8 +83,10 @@
             <button class="btn_pathselection" id="path6" onclick="add_label_path6();" type="button"><img id="image_path_6" src="images/Logo2.svg"></button>
             <button class="btn_pathselection" id="path7" onclick="add_label_path7();" type="button"><img id="image_path_7" src="images/Logo2.svg"></button>
             <button class="btn_pathselection" id="path8" onclick="add_label_path8();" type="button"><img id="image_path_8" src="images/Logo2.svg"></button>
-            <input class="form btn" id="alias" placeholder="Your Name or alias" type="text"><br>
-            <button id="send" onclick="send_data();" type="button">Abschicken</button>
+            <span id="alias-submit">
+            <input class="form btn" id="alias" placeholder="Your Name or alias" type="text">
+            <button id="send" class="btn" onclick="send_data();" type="button">Submit</button>
+            </span>
         </form>
         <p id="explanation_pathselection">How to use: </br> In order to enable our model to learn which elements ("paths" in svg language) of a given logo it should animate, we need to provide training examples of good choices. Therefore, out of the given 8 elements, please select the ones you would recommend to animate. </p>
     </div>
