@@ -136,11 +136,12 @@ Index Html
   background: var(--clr-white);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header1"
     "logo"
-    "buttons";
+    "buttons"
+    "explanation";
   justify-items: center;
 }
 
@@ -208,6 +209,10 @@ Index Html
   border: 2px solid var(--clr-primary-1);
   cursor: text;
   justify-self: center;
+  box-shadow: none;
+}
+#explanation{
+  margin: 2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -232,6 +237,86 @@ Path Selection
 ======================================================= */
 
 
+.main_pathselection {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header1"
+    "logo_pathselection"
+    "buttons_pathselection"
+    "explanation_pathselection";
+  justify-items: center;
+}
+
+.header1{
+  grid-area: header1;
+  margin: 1rem;
+}
+#logo_pathselection{
+  grid-area: logo_pathselection;
+  height: 11rem;
+  width: auto;
+  max-width: 90vw;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-color: var(--clr-primary-2);
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+}
+.buttons_pathselection{
+  grid-area: buttons_pathselection;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+  "btn1_pathselection btn2_pathselection"
+  "btn3_pathselection btn4_pathselection"
+  "btn5_pathselection btn6_pathselection"
+  "btn7_pathselection btn8_pathselection";
+}
+.btn_pathselection {
+  margin: 0.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  height: 10rem;
+  width: 10rem;
+  background: transparent;
+  position:relative;
+}
+.btn_pathselection:hover {
+  border: 2px solid var(--clr-primary-1);
+}
+.btn_pathselection img {
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#explanation_pathselection{
+  margin: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .buttons_pathselection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "btn1_pathselection btn2_pathselection btn3_pathselection btn4_pathselection"
+    "btn5_pathselection btn6_pathselection btn7_pathselection btn8_pathselection";
+  }
+  .btn_pathselection{
+    width: None;
+    min-width: 9rem;
+  }
+}
 
 
 
@@ -256,7 +341,7 @@ th{
 .list{
   margin-left: 2rem;
 }
-#btn-highscore{
+#btn6{
   margin-left: 1rem;
   margin-top: 0;
 }
