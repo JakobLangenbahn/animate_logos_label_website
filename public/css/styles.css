@@ -90,21 +90,28 @@ Navbar
   display: grid;
   align-items: center;
 }
-  .nav-links {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 3rem;
-    justify-self: end;
-    padding-right: 3rem;
+.nav-links {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 3rem;
+  justify-self: center;
   }
-  .nav-links a {
-    text-transform: capitalize;
-    color: var(--clr-primary-1);
-    font-weight: bold;
-    letter-spacing: var(--spacing);
+.nav-links a {
+  text-transform: capitalize;
+  color: var(--clr-primary-1);
+  font-weight: bold;
+  letter-spacing: var(--spacing);
   }
-  .nav-links a:hover {
-    color: var(--clr-primary-1-light);
+.nav-links a:hover {
+  color: var(--clr-primary-1-light);
+  }
+
+  @media screen and (min-width: 800px) {
+    .nav-links {
+      column-gap: 3rem;
+      justify-self: end;
+      padding-right: 3rem;
+      }
   }
 
 /*
@@ -216,11 +223,18 @@ Index Html
     width: None;
     min-width: 9rem;
   }
-  #logo{
-    height: 30rem;
-    width: auto;
-  }
 }
+
+/* =======================================================
+============================================================== 
+Path Selection
+==============================================================
+======================================================= */
+
+
+
+
+
 
 /* =======================================================
 ============================================================== 
