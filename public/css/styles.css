@@ -180,6 +180,7 @@ Index Html
   border-radius: var(--radius);
   min-width: 20rem;
   padding: 0.5rem;
+  outline: none;
 }
 .btn:hover {
   border: 2px solid var(--clr-primary-1);
@@ -287,11 +288,12 @@ Path Selection
   width: 9rem;
   background: transparent;
   position:relative;
+  outline: none;
 }
 .btn_pathselection:hover {
   border: 2px solid var(--clr-primary-1);
 }
-.btn_pathselection:active{
+.btn_pathselection_active {
   border: 2px solid var(--clr-primary-1);
 }
 .btn_pathselection img {
