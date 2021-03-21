@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- html head -->
+
+<head>
+
+    <!-- data layer -->
+    <script>
+        dataLayer = [];
+    </script>
+
+    <!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+    <script src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            cookieconsent.run({
+                notice_banner_type: "headline",
+                consent_type: "express",
+                palette: "light",
+                language: "en",
+                website_name: "Studomo.com",
+                cookies_policy_url:
+                    "https://studomo.com/Data-Protection-Declaration.html",
+                change_preferences_selector: "#changePreferences",
+            });
+        });
+    </script>
+
+
+    <noscript>Cookie Consent by
+        <a href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
+           rel="nofollow noopener">FreePrivacyPolicy.com</a></noscript>
+    <!-- End Cookie Consent -->
+
+    <!-- import css -->
+    <link href="./css/styles.css" rel="stylesheet"/>
+
+    <!-- import fontawesome -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/644da155ca.js"></script>
+
+
+    <!-- general settings -->
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Logo Animation || Highscores</title>
+
+</head>
+
+
+<!-- html body -->
+
+
+<body>
+
+
+<!-- navbar -->
+<nav class="nav" id="nav">
+    <ul class="nav-links">
+        <li>
+            <a href="index.html" id="index-link">Animation rating</a>
+        </li>
+        <li>
+            <a href="paths.html" id="paths-link">Path selecion</a>
+        </li>
+        <li>
+            <a href="highscores.html" id="highscores-link">Highscores</a>
+        </li>
+        <li>
+            <a href="aboutUs.html" id="about-page-link">About</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- page content-->
+<h2 class="header1">
+    Highscores
+</h2>
+
+<button href="#" class="btn" id="btn6" onClick="download_table_as_csv('table_highscore')">Download CSV</button>
+
+<table id="table_highscore">
+    <thead class="thead-inverse">
+    <tr>
+        <th>Alias</th>
+        <th>Logo</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="tr">
+        <td id="alias"></td>
+        <td id="logo"></td>
+        <td id="rating"></td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- JavaScript -->
+
+<!-- Import Firebase -->
+<script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+<!-- Add SDKs for Firebase products -->
+<script src="/__/firebase/7.17.1/firebase-firestore.js"></script>
+<script src="/__/firebase/8.2.10/firebase-firestore.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<!-- page javascript -->
+<script src="./js/downloaddata.js"></script>
+</body>
+
+</html>
