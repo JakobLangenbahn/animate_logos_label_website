@@ -291,7 +291,7 @@ Path Selection
 .btn_pathselection:hover {
   border: 2px solid var(--clr-primary-1);
 }
-.btn:active{
+.btn_pathselection:active{
   border: 2px solid var(--clr-primary-1);
 }
 .btn_pathselection img {
