@@ -74,6 +74,7 @@ let animate_logo_8 = false;
 // Change values
 function add_label_path1() {
     animate_logo_1 = true;
+    document.getElementById("path1").classList.toggle("btn_pathselection_active");
 }
 
 function add_label_path2() {
@@ -192,5 +193,8 @@ function update_highscore_load_new_image(alias) {
     animate_logo_6 = false;
     animate_logo_7 = false;
     animate_logo_8 = false;
-
 }
+
+// Keep buttons active
+
+
