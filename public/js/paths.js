@@ -74,7 +74,7 @@ let animate_logo_8 = false;
 // Change values
 function add_label_path1() {
     animate_logo_1 = true;
-    document.getElementById("path1").style.border = "1px solid black";
+    document.getElementById("path1").style.border = "2px solid black";
     document.getElementById("path1").onclick = delete_label_path1;
 }
 
@@ -86,7 +86,7 @@ function delete_label_path1() {
 
 function add_label_path2() {
     animate_logo_2 = true;
-    document.getElementById("path2").style.border = "1px solid black";
+    document.getElementById("path2").style.border = "2px solid black";
     document.getElementById("path2").onclick = delete_label_path2;
 }
 
@@ -98,7 +98,7 @@ function delete_label_path2() {
 
 function add_label_path3() {
     animate_logo_3 = true;
-    document.getElementById("path3").style.border = "1px solid black";
+    document.getElementById("path3").style.border = "2px solid black";
     document.getElementById("path3").onclick = delete_label_path3;
 }
 
@@ -110,7 +110,7 @@ function delete_label_path3() {
 
 function add_label_path4() {
     animate_logo_4 = true;
-    document.getElementById("path4").style.border = "1px solid black";
+    document.getElementById("path4").style.border = "2px solid black";
     document.getElementById("path4").onclick = delete_label_path4;
 }
 
@@ -122,7 +122,7 @@ function delete_label_path4() {
 
 function add_label_path5() {
     animate_logo_5 = true;
-    document.getElementById("path5").style.border = "1px solid black";
+    document.getElementById("path5").style.border = "2px solid black";
     document.getElementById("path5").onclick = delete_label_path5;
 }
 
@@ -134,7 +134,7 @@ function delete_label_path5() {
 
 function add_label_path6() {
     animate_logo_6 = true;
-    document.getElementById("path6").style.border = "1px solid black";
+    document.getElementById("path6").style.border = "2px solid black";
     document.getElementById("path6").onclick = delete_label_path6;
 }
 
@@ -146,7 +146,7 @@ function delete_label_path6() {
 
 function add_label_path7() {
     animate_logo_7 = true;
-    document.getElementById("path7").style.border = "1px solid black";
+    document.getElementById("path7").style.border = "2px solid black";
     document.getElementById("path7").onclick = delete_label_path7;
 }
 
@@ -158,7 +158,7 @@ function delete_label_path7() {
 
 function add_label_path8() {
     animate_logo_8 = true;
-    document.getElementById("path8").style.border = "1px solid black";
+    document.getElementById("path8").style.border = "2px solid black";
     document.getElementById("path8").onclick = delete_label_path8;
 }
 
