@@ -6,7 +6,7 @@ const storage = firebase.storage();
 let min = 0;
 let max = 8;
 let number = Math.floor(Math.random() * (max - min + 1) + min);
-let animation_file = 'animation_' + number + '.svg'
+let animation_file = 'animation/animation_' + number + '.svg'
 storage.ref(animation_file).getDownloadURL()
     .then((url) => {
         document.getElementById("logo").src = url;
@@ -74,7 +74,7 @@ function update_highscore_load_new_image(alias) {
     let min = 0;
     let max = 8;
     let number = Math.floor(Math.random() * (max - min + 1) + min);
-    animation_file = 'animation_' + number + '.svg'
+    animation_file = 'animation/animation_' + number + '.svg'
     storage.ref(animation_file).getDownloadURL()
         .then((url) => {
             document.getElementById("logo").src = url;
