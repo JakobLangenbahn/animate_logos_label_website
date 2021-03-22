@@ -72,37 +72,45 @@ let animate_logo_7 = false;
 let animate_logo_8 = false;
 
 // Change values
-function add_label_path1() {
+function add_label_path1(el) {
     animate_logo_1 = true;
-    document.getElementById("path1").classList.toggle("btn_pathselection_active");
+    el.style.border = "1px solid black";
 }
 
-function add_label_path2() {
+
+function add_label_path2(el) {
     animate_logo_2 = true;
+    el.style.border = "1px solid black";
 }
 
-function add_label_path3() {
+function add_label_path3(el) {
     animate_logo_3 = true;
+    el.style.border = "1px solid black";
 }
 
-function add_label_path4() {
+function add_label_path4(el) {
     animate_logo_4 = true;
+    el.style.border = "1px solid black";
 }
 
-function add_label_path5() {
+function add_label_path5(el) {
     animate_logo_5 = true;
+    el.style.border = "1px solid black";
 }
 
-function add_label_path6() {
+function add_label_path6(el) {
     animate_logo_6 = true;
+    el.style.border = "1px solid black";
 }
 
-function add_label_path7() {
+function add_label_path7(el) {
     animate_logo_7 = true;
+    el.style.border = "1px solid black";
 }
 
-function add_label_path8() {
+function add_label_path8(el) {
     animate_logo_8 = true;
+    el.style.border = "1px solid black";
 }
 
 
@@ -130,6 +138,17 @@ function update_highscore_load_new_image(alias) {
     const increment = firebase.firestore.FieldValue.increment(1);
     const storyRef = db.collection('highscore').doc(alias);
     storyRef.set({score: increment, alias: alias}, {merge: true});
+
+    // delete marker
+    document.getElementById("path1").style.border =  "none";
+    document.getElementById("path2").style.border =  "none";
+    document.getElementById("path3").style.border =  "none";
+    document.getElementById("path4").style.border =  "none";
+    document.getElementById("path5").style.border =  "none";
+    document.getElementById("path6").style.border =  "none";
+    document.getElementById("path7").style.border =  "none";
+    document.getElementById("path8").style.border =  "none";
+
 
     // get new image
     // create random generator
