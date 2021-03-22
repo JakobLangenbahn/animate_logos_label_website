@@ -293,9 +293,6 @@ Path Selection
 .btn_pathselection:hover {
   border: 2px solid var(--clr-primary-1);
 }
-.btn_pathselection_active {
-  border: 2px solid var(--clr-primary-1);
-}
 .btn_pathselection img {
   height: auto;
   width: auto;
