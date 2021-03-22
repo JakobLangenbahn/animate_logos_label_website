@@ -3,21 +3,26 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 
 // Initiate random image
-let number = 1;
-let logo_file_path_full = 'logo_' + number + "_path_full.svg";
-let logo_file_path_1 = 'logo_' + number + "_path_1.svg";
-let logo_file_path_2 = 'logo_' + number + "_path_2.svg";
-let logo_file_path_3 = 'logo_' + number + "_path_3.svg";
-let logo_file_path_4 = 'logo_' + number + "_path_4.svg";
-let logo_file_path_5 = 'logo_' + number + "_path_5.svg";
-let logo_file_path_6 = 'logo_' + number + "_path_6.svg";
-let logo_file_path_7 = 'logo_' + number + "_path_7.svg";
-let logo_file_path_8 = 'logo_' + number + "_path_8.svg";
+let number = 0;
+let logo_file_path_full = 'path/logo_' + number + "_path_full.svg";
+let logo_file_path_0 = 'path/logo_' + number + "_path_0.svg";
+let logo_file_path_1 = 'path/logo_' + number + "_path_1.svg";
+let logo_file_path_2 = 'path/logo_' + number + "_path_2.svg";
+let logo_file_path_3 = 'path/logo_' + number + "_path_3.svg";
+let logo_file_path_4 = 'path/logo_' + number + "_path_4.svg";
+let logo_file_path_5 = 'path/logo_' + number + "_path_5.svg";
+let logo_file_path_6 = 'path/logo_' + number + "_path_6.svg";
+let logo_file_path_7 = 'path/logo_' + number + "_path_7.svg";
 
 
 storage.ref(logo_file_path_full).getDownloadURL()
     .then((url) => {
         document.getElementById("logo_full").src = url;
+    });
+
+storage.ref(logo_file_path_0).getDownloadURL()
+    .then((url_path_0) => {
+        document.getElementById("image_path_0").src = url_path_0;
     });
 
 storage.ref(logo_file_path_1).getDownloadURL()
@@ -55,13 +60,10 @@ storage.ref(logo_file_path_7).getDownloadURL()
         document.getElementById("image_path_7").src = url_path_7;
     });
 
-storage.ref(logo_file_path_8).getDownloadURL()
-    .then((url_path_8) => {
-        document.getElementById("image_path_8").src = url_path_8;
-    });
 
 
 // Initiate variables
+let animate_logo_0 = false;
 let animate_logo_1 = false;
 let animate_logo_2 = false;
 let animate_logo_3 = false;
@@ -69,112 +71,113 @@ let animate_logo_4 = false;
 let animate_logo_5 = false;
 let animate_logo_6 = false;
 let animate_logo_7 = false;
-let animate_logo_8 = false;
 
 // Change values
-function add_label_path1() {
+function add_label_path_0() {
+    animate_logo_0 = true;
+    document.getElementById("path_0").style.border = "1px solid black";
+    document.getElementById("path_0").onclick = delete_label_path_0;
+}
+
+function delete_label_path_0() {
+    animate_logo_0 = false;
+    document.getElementById("path_0").style.border = "none";
+    document.getElementById("path_0").onclick = add_label_path_0;
+}
+
+function add_label_path_1() {
     animate_logo_1 = true;
-    document.getElementById("path1").style.border = "2px solid black";
-    document.getElementById("path1").onclick = delete_label_path1;
+    document.getElementById("path_1").style.border = "1px solid black";
+    document.getElementById("path_1").onclick = delete_label_path_1;
 }
 
-function delete_label_path1() {
+function delete_label_path_1() {
     animate_logo_1 = false;
-    document.getElementById("path1").style.border = "none";
-    document.getElementById("path1").onclick = add_label_path1;
+    document.getElementById("path_1").style.border = "none";
+    document.getElementById("path_1").onclick = add_label_path_1;
 }
 
-function add_label_path2() {
+function add_label_path_2() {
     animate_logo_2 = true;
-    document.getElementById("path2").style.border = "2px solid black";
-    document.getElementById("path2").onclick = delete_label_path2;
+    document.getElementById("path_2").style.border = "1px solid black";
+    document.getElementById("path_2").onclick = delete_label_path_2;
 }
 
-function delete_label_path2() {
+function delete_label_path_2() {
     animate_logo_2 = false;
-    document.getElementById("path2").style.border = "none";
-    document.getElementById("path2").onclick = add_label_path2;
+    document.getElementById("path_2").style.border = "none";
+    document.getElementById("path_2").onclick = add_label_path_2;
 }
 
-function add_label_path3() {
+function add_label_path_3() {
     animate_logo_3 = true;
-    document.getElementById("path3").style.border = "2px solid black";
-    document.getElementById("path3").onclick = delete_label_path3;
+    document.getElementById("path_3").style.border = "1px solid black";
+    document.getElementById("path_3").onclick = delete_label_path_3;
 }
 
-function delete_label_path3() {
+function delete_label_path_3() {
     animate_logo_3 = false;
-    document.getElementById("path3").style.border = "none";
-    document.getElementById("path3").onclick = add_label_path3;
+    document.getElementById("path_3").style.border = "none";
+    document.getElementById("path_3").onclick = add_label_path_3;
 }
 
-function add_label_path4() {
+function add_label_path_4() {
     animate_logo_4 = true;
-    document.getElementById("path4").style.border = "2px solid black";
-    document.getElementById("path4").onclick = delete_label_path4;
+    document.getElementById("path_4").style.border = "1px solid black";
+    document.getElementById("path_4").onclick = delete_label_path_4;
 }
 
-function delete_label_path4() {
+function delete_label_path_4() {
     animate_logo_4 = false;
-    document.getElementById("path4").style.border = "none";
-    document.getElementById("path4").onclick = add_label_path4;
+    document.getElementById("path_4").style.border = "none";
+    document.getElementById("path_4").onclick = add_label_path_4;
 }
 
-function add_label_path5() {
+function add_label_path_5() {
     animate_logo_5 = true;
-    document.getElementById("path5").style.border = "2px solid black";
-    document.getElementById("path5").onclick = delete_label_path5;
+    document.getElementById("path_5").style.border = "1px solid black";
+    document.getElementById("path_5").onclick = delete_label_path_5;
 }
 
-function delete_label_path5() {
+function delete_label_path_5() {
     animate_logo_5 = false;
-    document.getElementById("path5").style.border = "none";
-    document.getElementById("path5").onclick = add_label_path5;
+    document.getElementById("path_5").style.border = "none";
+    document.getElementById("path_5").onclick = add_label_path_5;
 }
 
-function add_label_path6() {
+function add_label_path_6() {
     animate_logo_6 = true;
-    document.getElementById("path6").style.border = "2px solid black";
-    document.getElementById("path6").onclick = delete_label_path6;
+    document.getElementById("path_6").style.border = "1px solid black";
+    document.getElementById("path_6").onclick = delete_label_path_6;
 }
 
-function delete_label_path6() {
+function delete_label_path_6() {
     animate_logo_6 = false;
-    document.getElementById("path6").style.border = "none";
-    document.getElementById("path6").onclick = add_label_path6;
+    document.getElementById("path_6").style.border = "none";
+    document.getElementById("path_6").onclick = add_label_path_6;
 }
 
-function add_label_path7() {
+function add_label_path_7() {
     animate_logo_7 = true;
-    document.getElementById("path7").style.border = "2px solid black";
-    document.getElementById("path7").onclick = delete_label_path7;
+    document.getElementById("path_7").style.border = "1px solid black";
+    document.getElementById("path_7").onclick = delete_label_path_7;
 }
 
-function delete_label_path7() {
+function delete_label_path_7() {
     animate_logo_7 = false;
-    document.getElementById("path7").style.border = "none";
-    document.getElementById("path7").onclick = add_label_path7;
+    document.getElementById("path_7").style.border = "none";
+    document.getElementById("path_7").onclick = add_label_path_7;
 }
 
-function add_label_path8() {
-    animate_logo_8 = true;
-    document.getElementById("path8").style.border = "2px solid black";
-    document.getElementById("path8").onclick = delete_label_path8;
-}
-
-function delete_label_path8() {
-    animate_logo_8 = false;
-    document.getElementById("path8").style.border = "none";
-    document.getElementById("path8").onclick = add_label_path8;
-}
 
 
 
 // send button
 function send_data() {
-    var alias = document.getElementById("alias").value;
+    let alias = document.getElementById("alias").value;
     db.collection("labelpath").doc().set({
         logo: logo_file_path_full,
+        path_0: animate_logo_0,
         path_1: animate_logo_1,
         path_2: animate_logo_2,
         path_3: animate_logo_3,
@@ -182,7 +185,6 @@ function send_data() {
         path_5: animate_logo_5,
         path_6: animate_logo_6,
         path_7: animate_logo_7,
-        path_8: animate_logo_8,
         alias: alias
     })
     update_highscore_load_new_image(alias)
@@ -196,35 +198,50 @@ function update_highscore_load_new_image(alias) {
     storyRef.set({score: increment, alias: alias}, {merge: true});
 
     // delete marker
-    document.getElementById("path1").style.border =  "none";
-    document.getElementById("path2").style.border =  "none";
-    document.getElementById("path3").style.border =  "none";
-    document.getElementById("path4").style.border =  "none";
-    document.getElementById("path5").style.border =  "none";
-    document.getElementById("path6").style.border =  "none";
-    document.getElementById("path7").style.border =  "none";
-    document.getElementById("path8").style.border =  "none";
+    document.getElementById("path_0").style.border =  "none";
+    document.getElementById("path_1").style.border =  "none";
+    document.getElementById("path_2").style.border =  "none";
+    document.getElementById("path_3").style.border =  "none";
+    document.getElementById("path_4").style.border =  "none";
+    document.getElementById("path_5").style.border =  "none";
+    document.getElementById("path_6").style.border =  "none";
+    document.getElementById("path_7").style.border =  "none";
+
+    // add function
+    document.getElementById("path_0").onclick = add_label_path_0;
+    document.getElementById("path_1").onclick = add_label_path_1;
+    document.getElementById("path_2").onclick = add_label_path_2;
+    document.getElementById("path_3").onclick = add_label_path_3;
+    document.getElementById("path_4").onclick = add_label_path_4;
+    document.getElementById("path_5").onclick = add_label_path_5;
+    document.getElementById("path_6").onclick = add_label_path_6;
+    document.getElementById("path_7").onclick = add_label_path_7;
+
 
 
     // get new image
     // create random generator
     number++;
-    logo_file_path_full = 'logo_' + number + "_path_full.svg";
-    logo_file_path_1 = 'logo_' + number + "_path_1.svg";
-    logo_file_path_2 = 'logo_' + number + "_path_2.svg";
-    logo_file_path_3 = 'logo_' + number + "_path_3.svg";
-    logo_file_path_4 = 'logo_' + number + "_path_4.svg";
-    logo_file_path_5 = 'logo_' + number + "_path_5.svg";
-    logo_file_path_6 = 'logo_' + number + "_path_6.svg";
-    logo_file_path_7 = 'logo_' + number + "_path_7.svg";
-    logo_file_path_8 = 'logo_' + number + "_path_8.svg";
+    logo_file_path_full = 'path/logo_' + number + "_path_full.svg";
+    logo_file_path_0 = 'path/logo_' + number + "_path_0.svg";
+    logo_file_path_1 = 'path/logo_' + number + "_path_1.svg";
+    logo_file_path_2 = 'path/logo_' + number + "_path_2.svg";
+    logo_file_path_3 = 'path/logo_' + number + "_path_3.svg";
+    logo_file_path_4 = 'path/logo_' + number + "_path_4.svg";
+    logo_file_path_5 = 'path/logo_' + number + "_path_5.svg";
+    logo_file_path_6 = 'path/logo_' + number + "_path_6.svg";
+    logo_file_path_7 = 'path/logo_' + number + "_path_7.svg";
+
 
 
     storage.ref(logo_file_path_full).getDownloadURL()
         .then((url) => {
             document.getElementById("logo_full").src = url;
         })
-
+    storage.ref(logo_file_path_0).getDownloadURL()
+        .then((url_path_0) => {
+            document.getElementById("image_path_0").src = url_path_0;
+        })
     storage.ref(logo_file_path_1).getDownloadURL()
         .then((url_path_1) => {
             document.getElementById("image_path_1").src = url_path_1;
@@ -253,13 +270,10 @@ function update_highscore_load_new_image(alias) {
         .then((url_path_7) => {
             document.getElementById("image_path_7").src = url_path_7;
         })
-    storage.ref(logo_file_path_8).getDownloadURL()
-        .then((url_path_8) => {
-            document.getElementById("image_path_8").src = url_path_8;
-        })
 
 
 // Reset variables
+    animate_logo_0 = false;
     animate_logo_1 = false;
     animate_logo_2 = false;
     animate_logo_3 = false;
@@ -267,9 +281,8 @@ function update_highscore_load_new_image(alias) {
     animate_logo_5 = false;
     animate_logo_6 = false;
     animate_logo_7 = false;
-    animate_logo_8 = false;
+
 }
 
-// Keep buttons active
 
 
