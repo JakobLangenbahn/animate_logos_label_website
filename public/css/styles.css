@@ -76,6 +76,10 @@ ul {
 a {
   text-decoration: none;
 }
+h4{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
 /*
 ==============================================================
@@ -459,6 +463,7 @@ Legal Disclosure
 
 .main-legal{
   min-height: calc(100vh - 6rem);
+  padding: 1rem;
 }
 
 
@@ -470,4 +475,5 @@ Data Protection Declaration
 
 .main-data{
   min-height: calc(100vh - 6rem);
+  padding: 1rem;
 }
