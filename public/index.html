@@ -74,46 +74,52 @@
         <h2 class="header1">
             How do you like this animation?
         </h2>
-        <img id="logo" src="images/Logo.svg">
+        <img id="logo" src="images/load.svg">
         <span id="name-form">
         <form class="buttons">
             <button class="btn" id="btn1" onclick="add_label_very_bad(animation_file);" type="button">Very bad</button>
             <button class="btn" id="btn2" onclick="add_label_bad(animation_file);" type="button">Bad</button>
             <button class="btn" id="btn3" onclick="add_label_okay(animation_file);" type="button">Okay</button>
             <button class="btn" id="btn4" onclick="add_label_good(animation_file);" type="button">Good</button>
-            <button class="btn" id="btn5" onclick="add_label_very_good(animation_file);" type="button">Very good</button>
+            <button class="btn" id="btn5" onclick="add_label_very_good(animation_file);"
+                    type="button">Very good</button>
+            <button class="btn" id="btn0" onclick="no_logo();" type="button">No Logo</button>
             <input class="form btn" id="alias" placeholder="Your Name or alias" type="text"><br>
         </form>
     </span>
-    <p id="explanation">How to use: </br> In order to enable our model to learn which choice of animations looks good or bad, we need to provide training examples of good choices. </br>
-    Therefore, please rate each of the animations you see using the buttons above. </br> Before you start, please enter your name or alias to compete with others. You can check your score on the "Highscores" page. </p>
+        <p id="explanation">How to use: </br> In order to enable our model to learn which choice of animations looks
+            good or bad, we need to provide training examples of good choices. </br>
+            Therefore, please rate each of the animations you see using the buttons above. </br> Before you start,
+            please enter your name or alias to compete with others. You can check your score on the "Highscores"
+            page. </p>
     </div>
 
-        <!-- footer -->
-        <footer class="footer"> 
-            <!-- Legal Links -->
-            <a class="legal-links" id="privacypolicy" href="Data-Protection-Declaration.html">Data Protection Declaration</a>
-            <a class="legal-links" id="legaldisclosure" href="Legal-Disclosure.html">Legal Disclosure</a>
-            <a href="#" class="legal-links" id="changePreferences">Change Cookies</a>
-          </footer>
+    <!-- footer -->
+    <footer class="footer">
+        <!-- Legal Links -->
+        <a class="legal-links" href="Data-Protection-Declaration.html" id="privacypolicy">Data Protection
+            Declaration</a>
+        <a class="legal-links" href="Legal-Disclosure.html" id="legaldisclosure">Legal Disclosure</a>
+        <a class="legal-links" href="#" id="changePreferences">Change Cookies</a>
+    </footer>
 
-
-    <!-- JavaScript -->
-
-    <!-- Import Firebase -->
-    <script src="/__/firebase/8.2.10/firebase-app.js"></script>
-
-    <!-- Add SDKs for Firebase products -->
-    <script src="/__/firebase/8.3.1/firebase-analytics.js"></script>
-    <script src="/__/firebase/8.2.10/firebase-storage.js"></script>
-    <script src="/__/firebase/8.2.10/firebase-firestore.js"></script>
-
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
-
-    <!-- page javascript -->
-    <script src="./js/index.js"></script>
 </div>
+
+<!-- JavaScript -->
+
+<!-- Import Firebase -->
+<script src="/__/firebase/8.2.10/firebase-app.js"></script>
+
+<!-- Add SDKs for Firebase products -->
+<script src="/__/firebase/8.3.1/firebase-analytics.js"></script>
+<script src="/__/firebase/8.2.10/firebase-storage.js"></script>
+<script src="/__/firebase/8.2.10/firebase-firestore.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<!-- page javascript -->
+<script src="./js/index.js"></script>
 </body>
 
 </html>
