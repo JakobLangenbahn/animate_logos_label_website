@@ -1,5 +1,5 @@
 var db = firebase.firestore();
-db.collection('labelpath').get().then((snapshot) => {
+db.collection('label').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderAccount(doc);
     })
@@ -9,42 +9,23 @@ const accountList = document.querySelector('#table_highscore');
 
 function renderAccount(doc) {
     let tr = document.createElement('tr');
-    let td_logo = document.createElement('td');
-    let td_path_0 = document.createElement('td');
-    let td_path_1 = document.createElement('td');
-    let td_path_2 = document.createElement('td');
-    let td_path_3 = document.createElement('td');
-    let td_path_4 = document.createElement('td');
-    let td_path_5 = document.createElement('td');
-    let td_path_6 = document.createElement('td');
-    let td_path_7 = document.createElement('td');
     let td_alias = document.createElement('td');
-
+    let td_logo = document.createElement('td');
+    let td_rating = document.createElement('td');
+    let td_time = document.createElement('td');
 
     tr.setAttribute('data-id', doc.id);
 
-    td_logo.textContent = doc.data().logo;
-    td_path_0.textContent = doc.data().path_0
-    td_path_1.textContent = doc.data().path_1
-    td_path_2.textContent = doc.data().path_2
-    td_path_3.textContent = doc.data().path_3
-    td_path_4.textContent = doc.data().path_4
-    td_path_5.textContent = doc.data().path_5
-    td_path_6.textContent = doc.data().path_6
-    td_path_7.textContent = doc.data().path_7
     td_alias.textContent = doc.data().alias;
+    td_logo.textContent = doc.data().logo;
+    td_rating.textContent = doc.data().rating;
+    td_time.textContent = doc.data().time;
 
 
-    tr.appendChild(td_logo);
-    tr.appendChild(td_path_0);
-    tr.appendChild(td_path_1);
-    tr.appendChild(td_path_2);
-    tr.appendChild(td_path_3);
-    tr.appendChild(td_path_4);
-    tr.appendChild(td_path_5);
-    tr.appendChild(td_path_6);
-    tr.appendChild(td_path_7);
     tr.appendChild(td_alias);
+    tr.appendChild(td_logo);
+    tr.appendChild(td_rating);
+    tr.appendChild(td_time);
 
     accountList.appendChild(tr);
 
