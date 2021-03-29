@@ -40,11 +40,11 @@ function update_highscore_load_new_image(alias) {
 
     // reset timer
     var timeleft = 5;
-    var timer = setInterval(function(){
+    var time = setInterval(function(){
     timeleft--;
     document.getElementById("timer").textContent = timeleft;
     if(timeleft <= 0)
-        clearInterval(timer);
+        clearInterval(time);
     },1000);
 
 }
