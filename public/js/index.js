@@ -38,6 +38,15 @@ function update_highscore_load_new_image(alias) {
     // get new image
     random_logo(min_logo, max_logo,min_animation,max_animation)
 
+    // reset timer
+    var timeleft = 5;
+    var timer = setInterval(function(){
+    timeleft--;
+    document.getElementById("timer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(timer);
+    },1000);
+
 }
 
 // add label functions
@@ -112,4 +121,7 @@ let animation_file = 'animation/logo_' + number_logo + '_animation_' + number_an
 
 // show initial animation
 storageRef.child(animation_file).getDownloadURL().then(onResolve, onReject);
+
+
+
 
