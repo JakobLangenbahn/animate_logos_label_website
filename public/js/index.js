@@ -122,6 +122,15 @@ let animation_file = 'animation/logo_' + number_logo + '_animation_' + number_an
 // show initial animation
 storageRef.child(animation_file).getDownloadURL().then(onResolve, onReject);
 
+// start timer
+var timeleft = 5;
+var time = setInterval(function(){
+timeleft--;
+document.getElementById("timer").textContent = timeleft;
+if(timeleft <= 0)
+    clearInterval(time);
+},1000);
+
 
 
 

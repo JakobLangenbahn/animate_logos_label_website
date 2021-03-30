@@ -88,11 +88,20 @@
             <button class="btn" id="btn0" onclick="no_logo();" type="button">No Logo</button>
         </form>
     </span>
-        <p id="explanation">How to use: </br> In order to enable our model to learn which choice of animations looks
+    <div id="explanation">
+        <h4>How to use</h4>
+        <p>In order to enable our model to learn which choice of animations looks
             good or bad, we need to provide training examples of good choices. </br>
-            Therefore, please rate each of the animations you see using the buttons above. </br> Before you start,
+            Therefore, please rate each of the 5 second animations you see using the buttons above. </br> Before you start,
             please enter your name or alias to compete with others. You can check your score on the "Highscores"
             page. </p>
+        <h4>How to interpret the labels</h4>
+        <p><b style="background-color:#c97064;">VERY BAD</b>: Very bad animation that animates the wrong elements of the logo or animates them in an ugly way</p>
+        <p><b style="background-color:#E4B9B4;">BAD</b>: Bad animation with few good approaches recognizable</p>
+        <p><b style="background-color:#f5f5f5;">OKAY</b>: Simple but good animation, e.g. comparable to PowerPoint animations</p>
+        <p><b style="background-color:#cfefd8;">GOOD</b>: Cool animation but could still be improved</p>
+        <p><b style="background-color:#93e5ab;">VERY GOOD</b>: Perfect animation, could be used in production</p>
+        </div>
     </div>
 
     <!-- footer -->
