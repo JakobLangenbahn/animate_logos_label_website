@@ -2,8 +2,8 @@
 const db = firebase.firestore();
 const storage = firebase.storage();
 
-// Initiate random image
-let number = 0;
+// Initiate first image
+let number = 192;
 let logo_file_path_full = 'path/logo_' + number + "_path_full.svg";
 let logo_file_path_0 = 'path/logo_' + number + "_path_0.svg";
 let logo_file_path_1 = 'path/logo_' + number + "_path_1.svg";
@@ -176,6 +176,7 @@ function delete_label_path_7() {
 function send_data() {
     let alias = document.getElementById("alias").value;
     db.collection("labelpath").doc().set({
+        alias: alias,
         logo: logo_file_path_full,
         path_0: animate_logo_0,
         path_1: animate_logo_1,
@@ -185,7 +186,7 @@ function send_data() {
         path_5: animate_logo_5,
         path_6: animate_logo_6,
         path_7: animate_logo_7,
-        alias: alias
+        time: firebase.firestore.FieldValue.serverTimestamp()
     })
     update_highscore_load_new_image(alias)
 }
@@ -220,7 +221,6 @@ function update_highscore_load_new_image(alias) {
 
 
     // get new image
-    // create random generator
     number++;
     logo_file_path_full = 'path/logo_' + number + "_path_full.svg";
     logo_file_path_0 = 'path/logo_' + number + "_path_0.svg";

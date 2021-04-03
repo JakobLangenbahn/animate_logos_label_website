@@ -5,7 +5,7 @@ db.collection('label').get().then((snapshot) => {
     })
 })
 
-const accountList = document.querySelector('#table_highscore');
+const accountList = document.querySelector('#table_animation_label');
 
 function renderAccount(doc) {
     let tr = document.createElement('tr');
