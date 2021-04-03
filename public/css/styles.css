@@ -488,12 +488,10 @@ Path Selection
   border: 2px solid var(--clr-primary-1);
 }
 .btn_pathselection img {
-  /*height: auto;
+  height: auto;
   width: auto;
   max-height: 100%;
-  max-width: 100%;*/
-  height: 150%;
-  width: 150%;
+  max-width: 100%;
   position:absolute;
   top: 50%;
   left:50%;
