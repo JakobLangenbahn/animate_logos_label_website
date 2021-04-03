@@ -82,11 +82,12 @@
     Highscores
 </h2>
 
-<button href="#" class="btn" id="btn6" onClick="download_table_as_csv('table_highscore')">Download CSV</button>
+<button href="#" class="btn" id="btn6" onClick="download_table_as_csv('path_label')">Download CSV</button>
 
-<table id="table_highscore">
+<table id="table_path_label">
     <thead class="thead-inverse">
     <tr>
+        <th>alias</th>
         <th>logo</th>
         <th>path_0</th>
         <th>path_1</th>
@@ -96,11 +97,12 @@
         <th>path_5</th>
         <th>path_6</th>
         <th>path_7</th>
-        <th>alias</th>
+        <th>time</th>
     </tr>
     </thead>
     <tbody>
     <tr id="tr">
+        <td id="alias"></td>
         <td id="logo"></td>
         <td id="path_0"></td>
         <td id="path_1"></td>
@@ -110,7 +112,7 @@
         <td id="path_5"></td>
         <td id="path_6"></td>
         <td id="path_7"></td>
-        <td id="alias"></td>
+        <td id="time"></td>
     </tr>
     </tbody>
 </table>
@@ -137,7 +139,7 @@
 <script src="/__/firebase/init.js"></script>
 
 <!-- page javascript -->
-<script src="./js/downloaddata.js"></script>
+<script src="./js/downloadpathdata.js"></script>
 </body>
 
 </html>
