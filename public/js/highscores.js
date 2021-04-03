@@ -1,5 +1,5 @@
 var db = firebase.firestore();
-db.collection('highscore').orderBy("score", "desc").limit(10).get().then((snapshot) => {
+db.collection('highscore').orderBy("score", "desc").limit(20).get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderAccount(doc);
     })
