@@ -306,54 +306,60 @@ Path Animation Rating
 
 .main_pathanimation {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
-    "header1"
-    "logo_full_2"
-    "btn-repeat"
-    "buttons_pathanimation"
-    "explanation_pathanimation";
+    "header1 header1"
+    "leftside buttons_pathanimation"
+    "explanation_pathanimation explanation_pathanimation";
   justify-items: center;
+  align-items: center;
   min-height: calc(100vh - 6rem);
 }
 .header1{
   grid-area: header1;
   margin: 1rem;
 }
+#leftside{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
 #logo_full_2{
-  grid-area: logo_full_2;
-  height: 10rem;
+  height: auto;
   width: auto;
-  max-width: 90vw;
+  max-height: 18rem;
+  max-width: 18rem;
   padding: 0.5rem;
-  border: 1px solid;
+  border: 2px solid;
   border-color: var(--clr-primary-2);
   border-radius: var(--radius);
+}
+#btn-repeat{
+  align-self: top;
 }
 .buttons_pathanimation{
   grid-area: buttons_pathanimation;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-  "path0_animation path1_animation path2_animation path3_animation path4_animation path5_animation path6_animation path7_animation"
-  "path_0_animation_buttons path_1_animation_buttons path_2_animation_buttons path_3_animation_buttons path_4_animation_buttons path_5_animation_buttons path_6_animation_buttons path_7_animation_buttons"
-  "alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2";
+  "path0_animation path1_animation path2_animation path3_animation"
+  "path_0_animation_buttons path_1_animation_buttons path_2_animation_buttons path_3_animation_buttons"
+  "path4_animation path5_animation path6_animation path7_animation"
+  "path_4_animation_buttons path_5_animation_buttons path_6_animation_buttons path_7_animation_buttons"
+  "alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2";
   justify-items: center;
 }
 .btn_pathanimation {
   border: 2px solid transparent;
-  cursor: pointer;
-  height: 9rem;
-  width: None;
-  min-width: 9rem;
+  height: 12rem;
+  width: 12rem;
   background: transparent;
   position: relative;
   outline: none;
-}
-.btn_pathanimation:hover {
-  border: 2px solid var(--clr-primary-1);
+  margin-right: 2rem;
 }
 .btn_pathanimation img {
   height: auto;
@@ -369,6 +375,9 @@ Path Animation Rating
 }
 .path_animation_buttons{
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  margin-right: 2rem;
 }
 .btn_small{
   text-transform: uppercase;
@@ -376,9 +385,14 @@ Path Animation Rating
   border: 1px solid transparent;
   cursor: pointer;
   border-radius: var(--radius);
-  padding: 0.1rem;
-  margin-top: 0.1rem;
   outline: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: 0.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 0;
 }
 .btn_small:hover{
   border: 1px solid var(--clr-primary-1);
@@ -403,17 +417,18 @@ Path Animation Rating
   grid-template-areas:
   "alias-2 send-2";
   justify-self: center;
-  margin-top: 0.5rem;
 }
 #alias-2{
   grid-area: alias-2;
   display: grid;
+  cursor: text;
 }
 #send-2{
   grid-area: send-2;
   display: grid;
 }
 #explanation_pathanimation{
+  grid-area: explanation_pathanimation;
   margin: 2rem;
 }
 
