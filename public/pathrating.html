@@ -76,8 +76,10 @@
         <h2 class="header1">
             How do you like the path animations?
         </h2>
+        <div id="leftside">
         <img id="logo_full_2" src="images/load.svg">
         <button class="btn" id="btn-repeat">Repeat Animation</button>
+        </div>
         <form class="buttons_pathanimation">
             <div id="path_0_image">
                 <button class="btn_pathanimation" id="path_0_animation" type="button"><img id="image_path_0_animation"
@@ -99,6 +101,72 @@
                                                                                            src="images/load.svg">
                 </button>
             </div>
+
+            <div class="path_animation_buttons" id="path_0_animation_buttons">
+                <button class="btn_small btn-very-bad" id="path0_btn1" onclick="add_label_path_0('Very Bad');"
+                        type="button">--
+                </button>
+                <button class="btn_small btn-bad" id="path0_btn2" onclick="add_label_path_0('Bad');"
+                        type="button">-
+                </button>
+                <button class="btn_small" id="path0_btn3" onclick="add_label_path_0('Okay');" type="button">
+                </button>
+                <button class="btn_small btn-good" id="path0_btn4" onclick="add_label_path_0('Good');"
+                        type="button">+
+                </button>
+                <button class="btn_small btn-very-good" id="path0_btn5" onclick="add_label_path_0('Very Good');"
+                        type="button">++
+                </button>
+            </div>
+            <div class="path_animation_buttons" id="path_1_animation_buttons">
+                <button class="btn_small btn-very-bad" id="path1_btn1" onclick="add_label_path_1('Very Bad');"
+                        type="button">--
+                </button>
+                <button class="btn_small btn-bad" id="path1_btn2" onclick="add_label_path_1('Bad');"
+                        type="button">-
+                </button>
+                <button class="btn_small" id="path1_btn3" onclick="add_label_path_1('Okay');" type="button">
+                </button>
+                <button class="btn_small btn-good" id="path1_btn4" onclick="add_label_path_1('Good');"
+                        type="button">+
+                </button>
+                <button class="btn_small btn-very-good" id="path1_btn5" onclick="add_label_path_1('Very Good');"
+                        type="button">++
+                </button>
+            </div>
+            <div class="path_animation_buttons" id="path_2_animation_buttons">
+                <button class="btn_small btn-very-bad" id="path2_btn1" onclick="add_label_path_2('Very Bad');"
+                        type="button">--
+                </button>
+                <button class="btn_small btn-bad" id="path2_btn2" onclick="add_label_path_2('Bad');"
+                        type="button">-
+                </button>
+                <button class="btn_small" id="path2_btn3" onclick="add_label_path_2('Okay');" type="button">
+                </button>
+                <button class="btn_small btn-good" id="path2_btn4" onclick="add_label_path_2('Good');"
+                        type="button">+
+                </button>
+                <button class="btn_small btn-very-good" id="path2_btn5" onclick="add_label_path_2('Very Good');"
+                        type="button">++
+                </button>
+            </div>
+            <div class="path_animation_buttons" id="path_3_animation_buttons">
+                <button class="btn_small btn-very-bad" id="path3_btn1" onclick="add_label_path_3('Very Bad');"
+                        type="button">--
+                </button>
+                <button class="btn_small btn-bad" id="path3_btn2" onclick="add_label_path_3('Bad');"
+                        type="button">-
+                </button>
+                <button class="btn_small" id="path3_btn3" onclick="add_label_path_3('Okay');" type="button">
+                </button>
+                <button class="btn_small btn-good" id="path3_btn4" onclick="add_label_path_3('Good');"
+                        type="button">+
+                </button>
+                <button class="btn_small btn-very-good" id="path3_btn5" onclick="add_label_path_3('Very Good');"
+                        type="button">++
+                </button>
+            </div>
+
             <div id="path_4_image">
                 <button class="btn_pathanimation" id="path_4_animation" type="button"><img id="image_path_4_animation"
                                                                                            src="images/load.svg">
@@ -119,134 +187,72 @@
                                                                                            src="images/load.svg">
                 </button>
             </div>
-            <div class="path_animation_buttons" id="path_0_animation_buttons">
-                <button class="btn_small btn-very-bad" id="path0_btn1" onclick="add_label_path_0('Very Bad');"
-                        type="button">Very bad
-                </button>
-                <button class="btn_small btn-bad" id="path0_btn2" onclick="add_label_path_0('Bad');"
-                        type="button">Bad
-                </button>
-                <button class="btn_small" id="path0_btn3" onclick="add_label_path_0('Okay');" type="button">Okay
-                </button>
-                <button class="btn_small btn-good" id="path0_btn4" onclick="add_label_path_0('Good');"
-                        type="button">Good
-                </button>
-                <button class="btn_small btn-very-good" id="path0_btn5" onclick="add_label_path_0('Very Good');"
-                        type="button">Very good
-                </button>
-            </div>
-            <div class="path_animation_buttons" id="path_1_animation_buttons">
-                <button class="btn_small btn-very-bad" id="path1_btn1" onclick="add_label_path_1('Very Bad');"
-                        type="button">Very bad
-                </button>
-                <button class="btn_small btn-bad" id="path1_btn2" onclick="add_label_path_1('Bad');"
-                        type="button">Bad
-                </button>
-                <button class="btn_small" id="path1_btn3" onclick="add_label_path_1('Okay');" type="button">Okay
-                </button>
-                <button class="btn_small btn-good" id="path1_btn4" onclick="add_label_path_1('Good');"
-                        type="button">Good
-                </button>
-                <button class="btn_small btn-very-good" id="path1_btn5" onclick="add_label_path_1('Very Good');"
-                        type="button">Very good
-                </button>
-            </div>
-            <div class="path_animation_buttons" id="path_2_animation_buttons">
-                <button class="btn_small btn-very-bad" id="path2_btn1" onclick="add_label_path_2('Very Bad');"
-                        type="button">Very bad
-                </button>
-                <button class="btn_small btn-bad" id="path2_btn2" onclick="add_label_path_2('Bad');"
-                        type="button">Bad
-                </button>
-                <button class="btn_small" id="path2_btn3" onclick="add_label_path_2('Okay');" type="button">Okay
-                </button>
-                <button class="btn_small btn-good" id="path2_btn4" onclick="add_label_path_2('Good');"
-                        type="button">Good
-                </button>
-                <button class="btn_small btn-very-good" id="path2_btn5" onclick="add_label_path_2('Very Good');"
-                        type="button">Very good
-                </button>
-            </div>
-            <div class="path_animation_buttons" id="path_3_animation_buttons">
-                <button class="btn_small btn-very-bad" id="path3_btn1" onclick="add_label_path_3('Very Bad');"
-                        type="button">Very bad
-                </button>
-                <button class="btn_small btn-bad" id="path3_btn2" onclick="add_label_path_3('Bad');"
-                        type="button">Bad
-                </button>
-                <button class="btn_small" id="path3_btn3" onclick="add_label_path_3('Okay');" type="button">Okay
-                </button>
-                <button class="btn_small btn-good" id="path3_btn4" onclick="add_label_path_3('Good');"
-                        type="button">Good
-                </button>
-                <button class="btn_small btn-very-good" id="path3_btn5" onclick="add_label_path_3('Very Good');"
-                        type="button">Very good
-                </button>
-            </div>
+ 
             <div class="path_animation_buttons" id="path_4_animation_buttons">
                 <button class="btn_small btn-very-bad" id="path4_btn1" onclick="add_label_path_4('Very Bad');"
-                        type="button">Very bad
+                        type="button">--
                 </button>
                 <button class="btn_small btn-bad" id="path4_btn2" onclick="add_label_path_4('Bad');"
-                        type="button">Bad
+                        type="button">-
                 </button>
-                <button class="btn_small" id="path4_btn3" onclick="add_label_path_4('Okay');" type="button">Okay
+                <button class="btn_small" id="path4_btn3" onclick="add_label_path_4('Okay');" type="button">
                 </button>
                 <button class="btn_small btn-good" id="path4_btn4" onclick="add_label_path_4('Good');"
-                        type="button">Good
+                        type="button">+
                 </button>
                 <button class="btn_small btn-very-good" id="path4_btn5" onclick="add_label_path_4('Very Good');"
-                        type="button">Very good
+                        type="button">++
                 </button>
             </div>
             <div class="path_animation_buttons" id="path_5_animation_buttons">
                 <button class="btn_small btn-very-bad" id="path5_btn1" onclick="add_label_path_5('Very Bad');"
-                        type="button">Very bad
+                        type="button">--
                 </button>
                 <button class="btn_small btn-bad" id="path5_btn2" onclick="add_label_path_5('Bad');"
-                        type="button">Bad
+                        type="button">-
                 </button>
-                <button class="btn_small" id="path5_btn3" onclick="add_label_path_5('Okay');" type="button">Okay
+                <button class="btn_small" id="path5_btn3" onclick="add_label_path_5('Okay');" type="button">
                 </button>
                 <button class="btn_small btn-good" id="path5_btn4" onclick="add_label_path_5('Good');"
-                        type="button">Good
+                        type="button">+
                 </button>
                 <button class="btn_small btn-very-good" id="path5_btn5" onclick="add_label_path_5('Very Good');"
-                        type="button">Very good
+                        type="button">++
                 </button>
             </div>
             <div class="path_animation_buttons" id="path_6_animation_buttons">
                 <button class="btn_small btn-very-bad" id="path6_btn6" onclick="add_label_path_6('Very Bad');"
-                        type="button">Very bad
+                        type="button">--
                 </button>
                 <button class="btn_small btn-bad" id="path6_btn2" onclick="add_label_path_6('Bad');"
-                        type="button">Bad
+                        type="button">-
                 </button>
-                <button class="btn_small" id="path6_btn3" onclick="add_label_path_6('Okay');" type="button">Okay
+                <button class="btn_small" id="path6_btn3" onclick="add_label_path_6('Okay');" type="button">
                 </button>
                 <button class="btn_small btn-good" id="path6_btn4" onclick="add_label_path_6('Good');"
-                        type="button">Good
+                        type="button">+
                 </button>
                 <button class="btn_small btn-very-good" id="path6_btn5" onclick="add_label_path_6('Very Good');"
-                        type="button">Very good
+                        type="button">++
                 </button>
             </div>
             <div class="path_animation_buttons" id="path_7_animation_buttons">
                 <button class="btn_small btn-very-bad" id="path7_btn1" onclick="add_label_path_7('Very Bad');"
-                        type="button">Very bad
+                        type="button">--
                 </button>
                 <button class="btn_small btn-bad" id="path7_btn2" onclick="add_label_path_7('Bad');"
-                        type="button">Bad
+                        type="button">-
                 </button>
-                <button class="btn_small" id="path7_btn3" onclick="add_label_path_7('Okay');" type="button">Okay
+                <button class="btn_small" id="path7_btn3" onclick="add_label_path_7('Okay');" type="button">
                 </button>
                 <button class="btn_small btn-good" id="path7_btn4" onclick="add_label_path_7('Good');"
-                        type="button">Good
+                        type="button">+
                 </button>
                 <button class="btn_small btn-very-good" id="path7_btn5" onclick="add_label_path_7('Very Good');"
-                        type="button">Very good
+                        type="button">++
                 </button>
             </div>
+
             <span id="alias-submit-2">
             <input class="form btn" id="alias-2" placeholder="Your Name or alias" type="text">
             <button class="btn" id="send-2" onclick="next_animation();" type="button">Submit</button>
