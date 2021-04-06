@@ -326,15 +326,26 @@ Path Animation Rating
   grid-template-rows: auto auto;
   justify-items: center;
 }
+#logo-wrapper{
+  height: 18rem;
+  width: 18rem;
+  position: relative;
+}
 #logo_full_2{
   height: auto;
   width: auto;
-  max-height: 18rem;
-  max-width: 18rem;
+  max-height: 100%;
+  max-width: 100%;
   padding: 0.5rem;
   border: 2px solid;
   border-color: var(--clr-primary-2);
   border-radius: var(--radius);
+  position:absolute;
+  top: 50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 #btn-repeat{
   align-self: top;
