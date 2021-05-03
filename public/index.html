@@ -7,7 +7,7 @@
 
     <!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
     <script src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
-            type="text/javascript"></script>
+        type="text/javascript"></script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             cookieconsent.run({
@@ -25,19 +25,19 @@
 
     <noscript>Cookie Consent by
         <a href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
-           rel="nofollow noopener">FreePrivacyPolicy.com</a></noscript>
+            rel="nofollow noopener">FreePrivacyPolicy.com</a></noscript>
     <!-- End Cookie Consent -->
 
     <!-- import css -->
-    <link href="./css/styles.css" rel="stylesheet"/>
+    <link href="./css/styles.css" rel="stylesheet" />
 
     <!-- import fontawesome -->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/644da155ca.js"></script>
 
 
     <!-- general settings -->
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Logo Animation || Home</title>
 
 </head>
@@ -49,89 +49,99 @@
 <body>
 
 
-<div class="overall-page">
+    <div class="overall-page">
 
-    <!-- navbar -->
-    <nav class="nav" id="nav">
-        <ul class="nav-links">
-            <li>
-                <a href="index.html" id="index-link">Logo animation rating</a>
-            </li>
-            <li>
-                <a href="rate-path-animation.html" id="pathrating-link">Path animation rating</a>
-            </li>
-            <li>
-                <a href="label-paths.html" id="paths-link">Path selection</a>
-            </li>
-            <li>
-                <a href="highscores.html" id="highscores-link">Highscores</a>
-            </li>
-            <li>
-                <a href="about-us.html" id="about-page-link">About</a>
-            </li>
-        </ul>
-    </nav>
+        <!-- navbar -->
+        <nav class="nav" id="nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" id="index-link">Logo animation rating</a>
+                </li>
+                <li>
+                    <a href="rate-path-animation.html" id="pathrating-link">Path animation rating</a>
+                </li>
+                <li>
+                    <a href="label-paths.html" id="paths-link">Path selection</a>
+                </li>
+                <li>
+                    <a href="highscores.html" id="highscores-link">Highscores</a>
+                </li>
+                <li>
+                    <a href="about-us.html" id="about-page-link">About</a>
+                </li>
+            </ul>
+        </nav>
 
-    <!-- page content-->
-    <div class="main">
-        <h2 class="header1">
-            How do you like this animation?
-        </h2>
-        <p> Duration: <span id="timer">5</span> seconds</p>
-        <img id="logo" src="images/load.svg">
-        <span id="name-form">
-        <form class="buttons">
-            <button class="btn" id="btn1" onclick="add_label_very_bad(animation_file);" type="button">Very bad</button>
-            <button class="btn" id="btn2" onclick="add_label_bad(animation_file);" type="button">Bad</button>
-            <button class="btn" id="btn3" onclick="add_label_okay(animation_file);" type="button">Okay</button>
-            <button class="btn" id="btn4" onclick="add_label_good(animation_file);" type="button">Good</button>
-            <button class="btn" id="btn5" onclick="add_label_very_good(animation_file);" type="button">Very good</button>
-            <input class="form btn" id="alias" placeholder="Your Name or alias" type="text">
-            <button class="btn" id="btn0" onclick="no_logo();" type="button">No Logo</button>
-        </form>
-    </span>
-    <div id="explanation">
-        <h4>How to use</h4>
-        <p>In order to enable our model to learn which choice of animations looks
-            good or bad, we need to provide training examples of good choices. </br>
-            Therefore, please rate each of the 5 second animations you see using the buttons above. </br> Before you start,
-            please enter your name or alias to compete with others. You can check your score on the "Highscores"
-            page. </p>
-        <h4>How to interpret the labels</h4>
-        <p><b style="background-color:#c97064;">VERY BAD</b>: Very bad animation that animates the wrong elements of the logo or animates them in an ugly way</p>
-        <p><b style="background-color:#E4B9B4;">BAD</b>: Bad animation with few good approaches recognizable</p>
-        <p><b style="background-color:#f5f5f5;">OKAY</b>: Simple but good animation, e.g. comparable to PowerPoint animations</p>
-        <p><b style="background-color:#cfefd8;">GOOD</b>: Cool animation but could still be improved</p>
-        <p><b style="background-color:#93e5ab;">VERY GOOD</b>: Perfect animation, could be used in production</p>
+        <!-- page content-->
+        <div class="main">
+            <h2 class="header1">
+                How do you like this animation?
+            </h2>
+            <!-- Logo -->
+            <p> Duration: <span id="timer">5</span> seconds</p>
+            <img id="logo" src="images/load.svg">
+            <span id="name-form">
+                <form class="buttons">
+                    <!-- Rating buttons -->
+                    <button class="btn" id="btn1" onclick="add_label_very_bad(animation_file);" type="button">Very
+                        bad</button>
+                    <button class="btn" id="btn2" onclick="add_label_bad(animation_file);" type="button">Bad</button>
+                    <button class="btn" id="btn3" onclick="add_label_okay(animation_file);" type="button">Okay</button>
+                    <button class="btn" id="btn4" onclick="add_label_good(animation_file);" type="button">Good</button>
+                    <button class="btn" id="btn5" onclick="add_label_very_good(animation_file);" type="button">Very
+                        good</button>
+                    <!-- Name and "no logo" button -->
+                    <input class="form btn" id="alias" placeholder="Your Name or alias" type="text">
+                    <button class="btn" id="btn0" onclick="no_logo();" type="button">No Logo</button>
+                </form>
+            </span>
+            <!-- Explanation text -->
+            <div id="explanation">
+                <h4>How to use</h4>
+                <p>In order to enable our model to learn which choice of animations looks
+                    good or bad, we need to provide training examples of good choices. </br>
+                    Therefore, please rate each of the 5 second animations you see using the buttons above. </br> Before
+                    you start,
+                    please enter your name or alias to compete with others. You can check your score on the "Highscores"
+                    page. </p>
+                <h4>How to interpret the labels</h4>
+                <p><b style="background-color:#c97064;">VERY BAD</b>: Very bad animation that animates the wrong
+                    elements of the logo or animates them in an ugly way</p>
+                <p><b style="background-color:#E4B9B4;">BAD</b>: Bad animation with few good approaches recognizable</p>
+                <p><b style="background-color:#f5f5f5;">OKAY</b>: Simple but good animation, e.g. comparable to
+                    PowerPoint animations</p>
+                <p><b style="background-color:#cfefd8;">GOOD</b>: Cool animation but could still be improved</p>
+                <p><b style="background-color:#93e5ab;">VERY GOOD</b>: Perfect animation, could be used in production
+                </p>
+            </div>
         </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <!-- Legal Links -->
+            <a class="legal-links" href="data-protection-declaration.html" id="privacypolicy">Data Protection
+                Declaration</a>
+            <a class="legal-links" href="legal-disclosure.html" id="legaldisclosure">Legal Disclosure</a>
+            <a class="legal-links" href="#" id="changePreferences">Change Cookies</a>
+        </footer>
+
     </div>
 
-    <!-- footer -->
-    <footer class="footer">
-        <!-- Legal Links -->
-        <a class="legal-links" href="data-protection-declaration.html" id="privacypolicy">Data Protection
-            Declaration</a>
-        <a class="legal-links" href="legal-disclosure.html" id="legaldisclosure">Legal Disclosure</a>
-        <a class="legal-links" href="#" id="changePreferences">Change Cookies</a>
-    </footer>
+    <!-- JavaScript -->
 
-</div>
+    <!-- Import Firebase -->
+    <script src="/__/firebase/8.2.10/firebase-app.js"></script>
 
-<!-- JavaScript -->
+    <!-- Add SDKs for Firebase products -->
+    <script src="/__/firebase/8.3.1/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.2.10/firebase-storage.js"></script>
+    <script src="/__/firebase/8.2.10/firebase-firestore.js"></script>
 
-<!-- Import Firebase -->
-<script src="/__/firebase/8.2.10/firebase-app.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
 
-<!-- Add SDKs for Firebase products -->
-<script src="/__/firebase/8.3.1/firebase-analytics.js"></script>
-<script src="/__/firebase/8.2.10/firebase-storage.js"></script>
-<script src="/__/firebase/8.2.10/firebase-firestore.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-
-<!-- page javascript -->
-<script src="./js/index.js"></script>
+    <!-- page javascript -->
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

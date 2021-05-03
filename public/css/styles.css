@@ -76,7 +76,7 @@ ul {
 a {
   text-decoration: none;
 }
-h4{
+h4 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -100,25 +100,25 @@ Navbar
   justify-self: center;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  }
+}
 .nav-links a {
   text-transform: capitalize;
   color: var(--clr-primary-1);
   font-weight: bold;
   letter-spacing: var(--spacing);
-  }
+}
 .nav-links a:hover {
   color: var(--clr-primary-1-light);
-  }
+}
 
-  @media screen and (min-width: 800px) {
-    .nav-links {
-      column-gap: 3rem;
-      justify-self: end;
-      padding-right: 3rem;
-      margin: 0;
-      }
+@media screen and (min-width: 800px) {
+  .nav-links {
+    column-gap: 3rem;
+    justify-self: end;
+    padding-right: 3rem;
+    margin: 0;
   }
+}
 
 /*
 ==============================================================
@@ -126,64 +126,64 @@ Footer
 ==============================================================
 */
 
+.footer {
+  height: 3rem;
+  max-width: 100vw;
+  text-align: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "privacypolicy"
+    "legaldisclosure"
+    "changePreferences";
+}
+#privacypolicy {
+  grid-area: privacypolicy;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+#legaldisclosure {
+  grid-area: legaldisclosure;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+#changePreferences {
+  grid-area: changePreferences;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.legal-links {
+  transition: var(--transition);
+  color: var(--clr-primary-1);
+  font-weight: bold;
+}
+.legal-links:hover {
+  color: var(--clr-primary-1-light);
+}
+
+@media screen and (min-width: 800px) {
   .footer {
-    height: 3rem;
-    max-width: 100vw;
-    text-align: center;
-    align-items: center;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "privacypolicy" 
-      "legaldisclosure"
-      "changePreferences";
+    margin-top: 0rem;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "privacypolicy legaldisclosure changePreferences";
   }
   #privacypolicy {
-    grid-area: privacypolicy;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding-bottom: 0px;
   }
   #legaldisclosure {
-    grid-area: legaldisclosure;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding-bottom: 0px;
   }
   #changePreferences {
-    grid-area: changePreferences;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding-bottom: 0px;
   }
-  .legal-links {
-    transition: var(--transition);
-    color: var(--clr-primary-1);
-    font-weight: bold;
-  }
-  .legal-links:hover {
-    color: var(--clr-primary-1-light);
-  }
-  
-  @media screen and (min-width: 800px) {
-    .footer {
-      display: grid;
-      margin-top: 0rem;
-      grid-template-columns: auto auto auto;
-      grid-template-rows: 1fr;
-      grid-template-areas: "privacypolicy legaldisclosure changePreferences";
-    }
-    #privacypolicy {
-      padding-bottom: 0px;
-    }
-    #legaldisclosure {
-      padding-bottom: 0px;
-    }
-    #changePreferences {
-      padding-bottom: 0px;
-    }
-  }
+}
 
 /* =======================================================
 ============================================================== 
@@ -205,11 +205,11 @@ Index Html
   min-height: calc(100vh - 6rem);
 }
 
-.header1{
+.header1 {
   grid-area: header1;
   margin: 1rem;
 }
-#logo{
+#logo {
   grid-area: logo;
   height: 20rem;
   width: auto;
@@ -220,20 +220,20 @@ Index Html
   border-radius: var(--radius);
   margin-bottom: 0.5rem;
 }
-.buttons{
+.buttons {
   grid-area: buttons;
   margin-bottom: 0.5rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto auto auto;
   grid-template-areas:
-  "btn1"
-  "btn2"
-  "btn3"
-  "btn4"
-  "btn5"
-  "alias"
-  "btn0";
+    "btn1"
+    "btn2"
+    "btn3"
+    "btn4"
+    "btn5"
+    "alias"
+    "btn0";
 }
 .btn {
   text-transform: uppercase;
@@ -253,19 +253,19 @@ Index Html
 .btn:hover {
   border: 2px solid var(--clr-primary-1);
 }
-#btn1{
+#btn1 {
   background: var(--clr-primary-5);
 }
-#btn2{
-  background: #E4B9B4;
+#btn2 {
+  background: #e4b9b4;
 }
-#btn4{
+#btn4 {
   background: var(--clr-primary-2);
 }
-#btn5{
+#btn5 {
   background: var(--clr-primary-3);
 }
-#alias{
+#alias {
   grid-area: alias;
   display: grid;
   border: 2px solid var(--clr-primary-1);
@@ -273,17 +273,17 @@ Index Html
   justify-self: center;
   box-shadow: none;
 }
-#btn0{
+#btn0 {
   display: grid;
   grid-area: btn0;
   justify-self: center;
 }
-#explanation{
+#explanation {
   margin: 2rem;
 }
 
 @media screen and (min-width: 800px) {
-  .buttons{
+  .buttons {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto auto auto;
@@ -292,7 +292,7 @@ Index Html
       "alias alias alias alias alias"
       "btn0 btn0 btn0 btn0 btn0";
   }
-  .btn{
+  .btn {
     width: None;
     min-width: 9rem;
   }
@@ -316,17 +316,17 @@ Path Animation Rating
   align-items: center;
   min-height: calc(100vh - 6rem);
 }
-.header1{
+.header1 {
   grid-area: header1;
   margin: 1rem;
 }
-#leftside{
+#leftside {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   justify-items: center;
 }
-#logo-wrapper{
+#logo-wrapper {
   height: 18rem;
   width: 18rem;
   position: relative;
@@ -334,32 +334,32 @@ Path Animation Rating
   border-color: var(--clr-primary-2);
   border-radius: var(--radius);
 }
-#logo_full_2{
+#logo_full_2 {
   height: auto;
   width: 100%;
   max-height: 100%;
   padding: 0.5rem;
-  position:absolute;
+  position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-#btn-repeat{
+#btn-repeat {
   align-self: top;
 }
-.buttons_pathanimation{
+.buttons_pathanimation {
   grid-area: buttons_pathanimation;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-  "path0_animation path1_animation path2_animation path3_animation"
-  "path_0_animation_buttons path_1_animation_buttons path_2_animation_buttons path_3_animation_buttons"
-  "path4_animation path5_animation path6_animation path7_animation"
-  "path_4_animation_buttons path_5_animation_buttons path_6_animation_buttons path_7_animation_buttons"
-  "alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2";
+    "path0_animation path1_animation path2_animation path3_animation"
+    "path_0_animation_buttons path_1_animation_buttons path_2_animation_buttons path_3_animation_buttons"
+    "path4_animation path5_animation path6_animation path7_animation"
+    "path_4_animation_buttons path_5_animation_buttons path_6_animation_buttons path_7_animation_buttons"
+    "alias-submit-2 alias-submit-2 alias-submit-2 alias-submit-2";
   justify-items: center;
 }
 .btn_pathanimation {
@@ -376,20 +376,20 @@ Path Animation Rating
   width: auto;
   max-height: 100%;
   max-width: 100%;
-  position:absolute;
+  position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.path_animation_buttons{
+.path_animation_buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   margin-right: 2rem;
 }
-.btn_small{
+.btn_small {
   text-transform: uppercase;
   color: var(--clr-primary-1);
   border: 1px solid transparent;
@@ -404,40 +404,39 @@ Path Animation Rating
   text-align: center;
   padding: 0;
 }
-.btn_small:hover{
+.btn_small:hover {
   border: 1px solid var(--clr-primary-1);
 }
-.btn-very-bad{
+.btn-very-bad {
   background: var(--clr-primary-5);
 }
-.btn-bad{
-  background: #E4B9B4;
+.btn-bad {
+  background: #e4b9b4;
 }
-.btn-good{
+.btn-good {
   background: var(--clr-primary-2);
 }
-.btn-very-good{
+.btn-very-good {
   background: var(--clr-primary-3);
 }
-#alias-submit-2{
+#alias-submit-2 {
   grid-area: alias-submit-2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas:
-  "alias-2 send-2";
+  grid-template-areas: "alias-2 send-2";
   justify-self: center;
 }
-#alias-2{
+#alias-2 {
   grid-area: alias-2;
   display: grid;
   cursor: text;
 }
-#send-2{
+#send-2 {
   grid-area: send-2;
   display: grid;
 }
-#explanation_pathanimation{
+#explanation_pathanimation {
   grid-area: explanation_pathanimation;
   margin: 2rem;
 }
@@ -447,7 +446,6 @@ Path Animation Rating
 Path Selection
 ==============================================================
 ======================================================= */
-
 
 .main_pathselection {
   display: grid;
@@ -462,11 +460,11 @@ Path Selection
   min-height: calc(100vh - 6rem);
 }
 
-.header1{
+.header1 {
   grid-area: header1;
   margin: 1rem;
 }
-#logo_full{
+#logo_full {
   grid-area: logo_full;
   height: 10rem;
   width: auto;
@@ -477,27 +475,27 @@ Path Selection
   border-radius: var(--radius);
   margin-bottom: 0.5rem;
 }
-.buttons_pathselection{
+.buttons_pathselection {
   grid-area: buttons_pathselection;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-  "path1 path2"
-  "path3 path4"
-  "path5 path6"
-  "path7 path8"
-  "alias-submit alias-submit";
+    "path1 path2"
+    "path3 path4"
+    "path5 path6"
+    "path7 path8"
+    "alias-submit alias-submit";
   justify-items: center;
 }
-#alias-submit{
+#alias-submit {
   grid-area: alias-submit;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-  "send"
-  "alias";
+    "send"
+    "alias";
   justify-self: center;
 }
 .btn_pathselection {
@@ -506,7 +504,7 @@ Path Selection
   height: 9rem;
   width: 9rem;
   background: transparent;
-  position:relative;
+  position: relative;
   outline: none;
 }
 .btn_pathselection:hover {
@@ -517,38 +515,37 @@ Path Selection
   width: auto;
   max-height: 100%;
   max-width: 100%;
-  position:absolute;
+  position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-#explanation_pathselection{
+#explanation_pathselection {
   margin: 2rem;
 }
 
 @media screen and (min-width: 800px) {
-  .buttons_pathselection{
+  .buttons_pathselection {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-    "path1 path2 path3 path4"
-    "path5 path6 path7 path8"
-    "alias-submit alias-submit alias-submit alias-submit";
+      "path1 path2 path3 path4"
+      "path5 path6 path7 path8"
+      "alias-submit alias-submit alias-submit alias-submit";
   }
-  .btn_pathselection{
+  .btn_pathselection {
     width: None;
     min-width: 9rem;
   }
-  #alias-submit{
+  #alias-submit {
     grid-area: alias-submit;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas:
-    "alias send";
+    grid-template-areas: "alias send";
     justify-self: center;
   }
 }
@@ -559,24 +556,24 @@ Highscores
 ==============================================================
 ======================================================= */
 
-.main-highscores{
+.main-highscores {
   min-height: calc(100vh - 7rem);
 }
-#table_highscore{
+#table_highscore {
   margin: 1rem;
   table-layout: auto;
 }
-th{
+th {
   background-color: var(--clr-primary-2);
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   padding: 0.5rem;
   min-width: 10rem;
 }
-.list{
+.list {
   margin-left: 2rem;
 }
-#btn6{
+#btn6 {
   margin-left: 1rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -588,7 +585,7 @@ About Us
 ==============================================================
 ======================================================= */
 
-.main-about{
+.main-about {
   min-height: calc(100vh - 7rem);
 }
 
@@ -598,7 +595,7 @@ Download data
 ==============================================================
 ======================================================= */
 
-.main-download{
+.main-download {
   min-height: calc(100vh - 7rem);
 }
 
@@ -608,7 +605,7 @@ Legal Disclosure
 ==============================================================
 ======================================================= */
 
-.main-legal{
+.main-legal {
   min-height: calc(100vh - 6rem);
   padding: 1rem;
 }
@@ -619,7 +616,7 @@ Data Protection Declaration
 ==============================================================
 ======================================================= */
 
-.main-data{
+.main-data {
   min-height: calc(100vh - 6rem);
   padding: 1rem;
 }
