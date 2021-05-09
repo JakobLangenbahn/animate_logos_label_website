@@ -245,7 +245,7 @@ function send_data() {
 
 
 /* Initialize the first 8 paths of the Logo with number 192 */
-let number = 192;
+let number = 194;
 let logo_file_path_full = 'path/logo_' + number + "_path_full.svg";
 let logo_file_path_0 = 'path/logo_' + number + "_path_0.svg";
 let logo_file_path_1 = 'path/logo_' + number + "_path_1.svg";
