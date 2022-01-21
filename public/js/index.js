@@ -48,7 +48,7 @@ function update_highscore_load_new_image(alias) {
     document.getElementById("animations_left").textContent = max_validation-validation_id;
 
     /* Reset timer so that the user is able to rate the timing of the animation */
-    let timeleft = 5;
+    let timeleft = 6;
     let time = setInterval(function () {
         timeleft--;
         document.getElementById("timer").textContent = timeleft;
@@ -151,7 +151,7 @@ if (!validation_id) {
 random_logo(validation_id)
 
 /* Set timer so that the user is able to rate the timing of the animation */
-let timeleft = 5;
+let timeleft = 6;
 let time = setInterval(function () {
     timeleft--;
     document.getElementById("timer").textContent = timeleft;
