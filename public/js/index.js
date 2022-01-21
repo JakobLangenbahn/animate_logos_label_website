@@ -11,7 +11,8 @@ function random_logo(validation_id) {
             .get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    animation_file = 'animation_validation/' + doc.data().file_id;
+                    file_id = doc.data().file_id;
+                    animation_file = 'animation_validation/' + file_id;
                     storageRef.child(animation_file).getDownloadURL().then(onResolve, onReject);
                 });
             })
@@ -41,6 +42,7 @@ function update_highscore_load_new_image(alias) {
     storyRef.set({score: increment, alias: alias}, {merge: true});
 
     validation_id++;
+    localStorage.setItem('validation_id_local_storage', validation_id);
     random_logo(validation_id)
 
     /* Reset timer so that the user is able to rate the timing of the animation */
@@ -56,26 +58,26 @@ function update_highscore_load_new_image(alias) {
 
 
 /* Add the label "Very Bad" in the database for this animation */
-function add_label_very_bad(animation_file, validation_id) {
-     if (validation_id <= max_validation) {
-         let alias = document.getElementById("alias").value;
-         db.collection("validation_label").doc().set({
-             logo: animation_file,
-             rating: "Very Bad",
-             alias: alias,
-             time: firebase.firestore.FieldValue.serverTimestamp()
-         })
-         update_highscore_load_new_image(alias)
-     }
+function add_label_very_bad(file_id, validation_id) {
+    if (validation_id < max_validation) {
+        let alias = document.getElementById("alias").value;
+        db.collection("validation_label").doc().set({
+            logo: file_id,
+            rating: "Very Bad",
+            alias: alias,
+            time: firebase.firestore.FieldValue.serverTimestamp()
+        })
+        update_highscore_load_new_image(alias)
+    }
 }
 
 
 /* Add the label "Bad" in the database for this animation */
-function add_label_bad(animation_file, validation_id) {
-    if (validation_id <= max_validation) {
+function add_label_bad(file_id, validation_id) {
+    if (validation_id < max_validation) {
         let alias = document.getElementById("alias").value;
         db.collection("validation_label").doc().set({
-            logo: animation_file,
+            logo: file_id,
             rating: "Bad",
             alias: alias,
             time: firebase.firestore.FieldValue.serverTimestamp()
@@ -86,11 +88,11 @@ function add_label_bad(animation_file, validation_id) {
 
 
 /* Add the label "Okay" in the database for this animation */
-function add_label_okay(animation_file, validation_id) {
-    if (validation_id <= max_validation) {
+function add_label_okay(file_id, validation_id) {
+    if (validation_id < max_validation) {
         let alias = document.getElementById("alias").value;
         db.collection("validation_label").doc().set({
-            logo: animation_file,
+            logo: file_id,
             rating: "Okay",
             alias: alias,
             time: firebase.firestore.FieldValue.serverTimestamp()
@@ -100,11 +102,11 @@ function add_label_okay(animation_file, validation_id) {
 }
 
 /* Add the label "Good" in the database for this animation */
-function add_label_good(animation_file, validation_id) {
-    if (validation_id <= max_validation) {
+function add_label_good(file_id, validation_id) {
+    if (validation_id < max_validation) {
         let alias = document.getElementById("alias").value;
         db.collection("validation_label").doc().set({
-            logo: animation_file,
+            logo: file_id,
             rating: "Good",
             alias: alias,
             time: firebase.firestore.FieldValue.serverTimestamp()
@@ -115,11 +117,11 @@ function add_label_good(animation_file, validation_id) {
 
 
 /* Add the label "Very Good" in the database for this animation */
-function add_label_very_good(animation_file, validation_id) {
-    if (validation_id <= max_validation) {
+function add_label_very_good(file_id, validation_id) {
+    if (validation_id < max_validation) {
         let alias = document.getElementById("alias").value;
         db.collection("validation_label").doc().set({
-            logo: animation_file,
+            logo: file_id,
             rating: "Very Good",
             alias: alias,
             time: firebase.firestore.FieldValue.serverTimestamp()
@@ -130,10 +132,21 @@ function add_label_very_good(animation_file, validation_id) {
 
 
 /* Initialize the first random animation */
-let validation_id = 0;
+let validation_id = Number(localStorage.getItem('validation_id_local_storage'));
+let animation_file;
+let file_id;
 let max_validation = 258;
-random_logo(validation_id);
 
+var cart = JSON.parse(localStorage.getItem('cart'));
+    if (!cart) {
+        cart = [];
+    }
+
+if (!validation_id) {
+    validation_id = 0;
+}
+
+random_logo(validation_id)
 
 /* Set timer so that the user is able to rate the timing of the animation */
 let timeleft = 5;
@@ -143,7 +156,5 @@ let time = setInterval(function () {
     if (timeleft <= 0)
         clearInterval(time);
 }, 1000);
-
-
 
 
