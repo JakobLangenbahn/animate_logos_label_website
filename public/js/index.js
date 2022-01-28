@@ -45,8 +45,6 @@ function update_highscore_load_new_image(alias) {
     localStorage.setItem('validation_id_local_storage', validation_id);
     random_logo(validation_id)
 
-    document.getElementById("animations_left").textContent = max_validation-validation_id;
-
     /* Reset timer so that the user is able to rate the timing of the animation */
     let timeleft = 6;
     let time = setInterval(function () {
