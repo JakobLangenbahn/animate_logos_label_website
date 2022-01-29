@@ -28,73 +28,81 @@ function update_highscore_load_new_image(alias) {
     document.getElementById("path_7").onclick = add_label_path_7;
 
     /* Increase the number so that every Logo is displayed in order based on their number */
-    number++;
-    logo_file_path_full = 'path/logo_' + number + "_path_full.svg";
-    logo_file_path_0 = 'path/logo_' + number + "_path_0.svg";
-    logo_file_path_1 = 'path/logo_' + number + "_path_1.svg";
-    logo_file_path_2 = 'path/logo_' + number + "_path_2.svg";
-    logo_file_path_3 = 'path/logo_' + number + "_path_3.svg";
-    logo_file_path_4 = 'path/logo_' + number + "_path_4.svg";
-    logo_file_path_5 = 'path/logo_' + number + "_path_5.svg";
-    logo_file_path_6 = 'path/logo_' + number + "_path_6.svg";
-    logo_file_path_7 = 'path/logo_' + number + "_path_7.svg";
+    order_id++;
+    db.collection("animation_example").where("order_id", "==", order_id)
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                logo_id_data = doc.data().logo_id;
+                logo_file_path_full = 'logos_example/logo_' + logo_id_data + ".svg";
+                logo_file_path_0 = 'animation_path_example/logo_' + logo_id_data + "_0.svg";
+                logo_file_path_1 = 'animation_path_example/logo_' + logo_id_data + "_1.svg";
+                logo_file_path_2 = 'animation_path_example/logo_' + logo_id_data + "_2.svg";
+                logo_file_path_3 = 'animation_path_example/logo_' + logo_id_data + "_3.svg";
+                logo_file_path_4 = 'animation_path_example/logo_' + logo_id_data + "_4.svg";
+                logo_file_path_5 = 'animation_path_example/logo_' + logo_id_data + "_5.svg";
+                logo_file_path_6 = 'animation_path_example/logo_' + logo_id_data + "_6.svg";
+                logo_file_path_7 = 'animation_path_example/logo_' + logo_id_data + "_7.svg";
 
-    storage.ref(logo_file_path_full).getDownloadURL()
-        .then((url) => {
-            document.getElementById("logo_full").src = url;
+
+                storage.ref(logo_file_path_full).getDownloadURL()
+                    .then((url) => {
+                        document.getElementById("logo_full").src = url;
+                    })
+
+                storage.ref(logo_file_path_0).getDownloadURL()
+                    .then((url_path_0) => {
+                        document.getElementById("image_path_0").src = url_path_0;
+                    })
+
+                storage.ref(logo_file_path_1).getDownloadURL()
+                    .then((url_path_1) => {
+                        document.getElementById("image_path_1").src = url_path_1;
+                    })
+
+                storage.ref(logo_file_path_2).getDownloadURL()
+                    .then((url_path_2) => {
+                        document.getElementById("image_path_2").src = url_path_2;
+                    })
+
+                storage.ref(logo_file_path_3).getDownloadURL()
+                    .then((url_path_3) => {
+                        document.getElementById("image_path_3").src = url_path_3;
+                    })
+
+                storage.ref(logo_file_path_4).getDownloadURL()
+                    .then((url_path_4) => {
+                        document.getElementById("image_path_4").src = url_path_4;
+                    })
+
+                storage.ref(logo_file_path_5).getDownloadURL()
+                    .then((url_path_5) => {
+                        document.getElementById("image_path_5").src = url_path_5;
+                    })
+
+                storage.ref(logo_file_path_6).getDownloadURL()
+                    .then((url_path_6) => {
+                        document.getElementById("image_path_6").src = url_path_6;
+                    })
+
+                storage.ref(logo_file_path_7).getDownloadURL()
+                    .then((url_path_7) => {
+                        document.getElementById("image_path_7").src = url_path_7;
+                    })
+
+                animate_logo_0 = false;
+                animate_logo_1 = false;
+                animate_logo_2 = false;
+                animate_logo_3 = false;
+                animate_logo_4 = false;
+                animate_logo_5 = false;
+                animate_logo_6 = false;
+                animate_logo_7 = false;
+
+            })
         })
-
-    storage.ref(logo_file_path_0).getDownloadURL()
-        .then((url_path_0) => {
-            document.getElementById("image_path_0").src = url_path_0;
-        })
-
-    storage.ref(logo_file_path_1).getDownloadURL()
-        .then((url_path_1) => {
-            document.getElementById("image_path_1").src = url_path_1;
-        })
-
-    storage.ref(logo_file_path_2).getDownloadURL()
-        .then((url_path_2) => {
-            document.getElementById("image_path_2").src = url_path_2;
-        })
-
-    storage.ref(logo_file_path_3).getDownloadURL()
-        .then((url_path_3) => {
-            document.getElementById("image_path_3").src = url_path_3;
-        })
-
-    storage.ref(logo_file_path_4).getDownloadURL()
-        .then((url_path_4) => {
-            document.getElementById("image_path_4").src = url_path_4;
-        })
-
-    storage.ref(logo_file_path_5).getDownloadURL()
-        .then((url_path_5) => {
-            document.getElementById("image_path_5").src = url_path_5;
-        })
-
-    storage.ref(logo_file_path_6).getDownloadURL()
-        .then((url_path_6) => {
-            document.getElementById("image_path_6").src = url_path_6;
-        })
-
-    storage.ref(logo_file_path_7).getDownloadURL()
-        .then((url_path_7) => {
-            document.getElementById("image_path_7").src = url_path_7;
-        })
-
-    animate_logo_0 = false;
-    animate_logo_1 = false;
-    animate_logo_2 = false;
-    animate_logo_3 = false;
-    animate_logo_4 = false;
-    animate_logo_5 = false;
-    animate_logo_6 = false;
-    animate_logo_7 = false;
 
 }
-
 
 /* Add the label "true" in the database for path 0 */
 function add_label_path_0() {
@@ -245,61 +253,80 @@ function send_data() {
 
 
 /* Initialize the first 8 paths of the Logo with number 192 */
-let number = 194;
-let logo_file_path_full = 'path/logo_' + number + "_path_full.svg";
-let logo_file_path_0 = 'path/logo_' + number + "_path_0.svg";
-let logo_file_path_1 = 'path/logo_' + number + "_path_1.svg";
-let logo_file_path_2 = 'path/logo_' + number + "_path_2.svg";
-let logo_file_path_3 = 'path/logo_' + number + "_path_3.svg";
-let logo_file_path_4 = 'path/logo_' + number + "_path_4.svg";
-let logo_file_path_5 = 'path/logo_' + number + "_path_5.svg";
-let logo_file_path_6 = 'path/logo_' + number + "_path_6.svg";
-let logo_file_path_7 = 'path/logo_' + number + "_path_7.svg";
+let order_id = 0;
 
-storage.ref(logo_file_path_full).getDownloadURL()
-    .then((url) => {
-        document.getElementById("logo_full").src = url;
-    });
+db.collection("animation_example").where("order_id", "==", order_id)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            logo_id_data = doc.data().logo_id;
+            logo_file_path_full = 'logos_example/logo_' + logo_id_data + ".svg";
+            logo_file_path_0 = 'animation_path_example/logo_' + logo_id_data + "_0.svg";
+            logo_file_path_1 = 'animation_path_example/logo_' + logo_id_data + "_1.svg";
+            logo_file_path_2 = 'animation_path_example/logo_' + logo_id_data + "_2.svg";
+            logo_file_path_3 = 'animation_path_example/logo_' + logo_id_data + "_3.svg";
+            logo_file_path_4 = 'animation_path_example/logo_' + logo_id_data + "_4.svg";
+            logo_file_path_5 = 'animation_path_example/logo_' + logo_id_data + "_5.svg";
+            logo_file_path_6 = 'animation_path_example/logo_' + logo_id_data + "_6.svg";
+            logo_file_path_7 = 'animation_path_example/logo_' + logo_id_data + "_7.svg";
 
-storage.ref(logo_file_path_0).getDownloadURL()
-    .then((url_path_0) => {
-        document.getElementById("image_path_0").src = url_path_0;
-    });
+            storage.ref(logo_file_path_full).getDownloadURL()
+                .then((url) => {
+                    document.getElementById("logo_full").src = url;
+                })
 
-storage.ref(logo_file_path_1).getDownloadURL()
-    .then((url_path_1) => {
-        document.getElementById("image_path_1").src = url_path_1;
-    });
+            storage.ref(logo_file_path_0).getDownloadURL()
+                .then((url_path_0) => {
+                    document.getElementById("image_path_0").src = url_path_0;
+                })
 
-storage.ref(logo_file_path_2).getDownloadURL()
-    .then((url_path_2) => {
-        document.getElementById("image_path_2").src = url_path_2;
-    });
+            storage.ref(logo_file_path_1).getDownloadURL()
+                .then((url_path_1) => {
+                    document.getElementById("image_path_1").src = url_path_1;
+                })
 
-storage.ref(logo_file_path_3).getDownloadURL()
-    .then((url_path_3) => {
-        document.getElementById("image_path_3").src = url_path_3;
-    });
+            storage.ref(logo_file_path_2).getDownloadURL()
+                .then((url_path_2) => {
+                    document.getElementById("image_path_2").src = url_path_2;
+                })
 
-storage.ref(logo_file_path_4).getDownloadURL()
-    .then((url_path_4) => {
-        document.getElementById("image_path_4").src = url_path_4;
-    });
+            storage.ref(logo_file_path_3).getDownloadURL()
+                .then((url_path_3) => {
+                    document.getElementById("image_path_3").src = url_path_3;
+                })
 
-storage.ref(logo_file_path_5).getDownloadURL()
-    .then((url_path_5) => {
-        document.getElementById("image_path_5").src = url_path_5;
-    });
+            storage.ref(logo_file_path_4).getDownloadURL()
+                .then((url_path_4) => {
+                    document.getElementById("image_path_4").src = url_path_4;
+                })
 
-storage.ref(logo_file_path_6).getDownloadURL()
-    .then((url_path_6) => {
-        document.getElementById("image_path_6").src = url_path_6;
-    });
+            storage.ref(logo_file_path_5).getDownloadURL()
+                .then((url_path_5) => {
+                    document.getElementById("image_path_5").src = url_path_5;
+                })
 
-storage.ref(logo_file_path_7).getDownloadURL()
-    .then((url_path_7) => {
-        document.getElementById("image_path_7").src = url_path_7;
-    });
+            storage.ref(logo_file_path_6).getDownloadURL()
+                .then((url_path_6) => {
+                    document.getElementById("image_path_6").src = url_path_6;
+                })
+
+            storage.ref(logo_file_path_7).getDownloadURL()
+                .then((url_path_7) => {
+                    document.getElementById("image_path_7").src = url_path_7;
+                })
+
+            animate_logo_0 = false;
+            animate_logo_1 = false;
+            animate_logo_2 = false;
+            animate_logo_3 = false;
+            animate_logo_4 = false;
+            animate_logo_5 = false;
+            animate_logo_6 = false;
+            animate_logo_7 = false;
+
+        })
+    })
+
 
 let animate_logo_0 = false;
 let animate_logo_1 = false;
