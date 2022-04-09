@@ -5,14 +5,14 @@ const storageRef = storage.ref();
 
 
 /* Display a random Logo for the user to label */
-function random_logo(validation_id) {
-    if (validation_id < max_validation) {
-        db.collection("validation_animation").where("order_id", "==", validation_id)
+function random_logo(ablation_id) {
+    if (ablation_id < max_ablation) {
+        db.collection("ablation_animation").where("order_id", "==", ablation_id)
             .get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     file_id = doc.data().file_id;
-                    animation_file = 'animation_validation/' + file_id;
+                    animation_file = 'animation_ablation/' + file_id;
                     storageRef.child(animation_file).getDownloadURL().then(onResolve, onReject);
                 });
             })
@@ -31,7 +31,7 @@ function onResolve(foundURL) {
 
 /* Choose another random Logo if it could not be found in firebase storage */
 function onReject() {
-    random_logo(validation_id)
+    random_logo(ablation_id)
 }
 
 
@@ -41,9 +41,9 @@ function update_highscore_load_new_image(alias) {
     const storyRef = db.collection('highscore').doc(alias);
     storyRef.set({score: increment, alias: alias}, {merge: true});
 
-    validation_id++;
-    localStorage.setItem('validation_id_local_storage', validation_id);
-    random_logo(validation_id)
+    ablation_id++;
+    localStorage.setItem('ablation_id_local_storage', ablation_id);
+    random_logo(ablation_id)
 
     /* Reset timer so that the user is able to rate the timing of the animation */
     let timeleft = 6;
@@ -58,10 +58,10 @@ function update_highscore_load_new_image(alias) {
 
 
 /* Add the label "Very Bad" in the database for this animation */
-function add_label_very_bad(file_id, validation_id) {
-    if (validation_id < max_validation) {
+function add_label_very_bad(file_id, ablation_id) {
+    if (ablation_id < max_ablation) {
         let alias = document.getElementById("alias").value;
-        db.collection("validation_label").doc().set({
+        db.collection("ablation_label").doc().set({
             logo: file_id,
             rating: "Very Bad",
             alias: alias,
@@ -73,10 +73,10 @@ function add_label_very_bad(file_id, validation_id) {
 
 
 /* Add the label "Bad" in the database for this animation */
-function add_label_bad(file_id, validation_id) {
-    if (validation_id < max_validation) {
+function add_label_bad(file_id, ablation_id) {
+    if (ablation_id < max_ablation) {
         let alias = document.getElementById("alias").value;
-        db.collection("validation_label").doc().set({
+        db.collection("ablation_label").doc().set({
             logo: file_id,
             rating: "Bad",
             alias: alias,
@@ -88,10 +88,10 @@ function add_label_bad(file_id, validation_id) {
 
 
 /* Add the label "Okay" in the database for this animation */
-function add_label_okay(file_id, validation_id) {
-    if (validation_id < max_validation) {
+function add_label_okay(file_id, ablation_id) {
+    if (ablation_id < max_ablation) {
         let alias = document.getElementById("alias").value;
-        db.collection("validation_label").doc().set({
+        db.collection("ablation_label").doc().set({
             logo: file_id,
             rating: "Okay",
             alias: alias,
@@ -102,10 +102,10 @@ function add_label_okay(file_id, validation_id) {
 }
 
 /* Add the label "Good" in the database for this animation */
-function add_label_good(file_id, validation_id) {
-    if (validation_id < max_validation) {
+function add_label_good(file_id, ablation_id) {
+    if (ablation_id < max_ablation) {
         let alias = document.getElementById("alias").value;
-        db.collection("validation_label").doc().set({
+        db.collection("ablation_label").doc().set({
             logo: file_id,
             rating: "Good",
             alias: alias,
@@ -117,10 +117,10 @@ function add_label_good(file_id, validation_id) {
 
 
 /* Add the label "Very Good" in the database for this animation */
-function add_label_very_good(file_id, validation_id) {
-    if (validation_id < max_validation) {
+function add_label_very_good(file_id, ablation_id) {
+    if (ablation_id < max_ablation) {
         let alias = document.getElementById("alias").value;
-        db.collection("validation_label").doc().set({
+        db.collection("ablation_label").doc().set({
             logo: file_id,
             rating: "Very Good",
             alias: alias,
@@ -132,21 +132,21 @@ function add_label_very_good(file_id, validation_id) {
 
 
 /* Initialize the first random animation */
-let validation_id = Number(localStorage.getItem('validation_id_local_storage'));
+let ablation_id = Number(localStorage.getItem('ablation_id_local_storage'));
 let animation_file;
 let file_id;
-let max_validation = 258;
+let max_ablation = 90;
 
 var cart = JSON.parse(localStorage.getItem('cart'));
     if (!cart) {
         cart = [];
     }
 
-if (!validation_id) {
-    validation_id = 0;
+if (!ablation_id) {
+    ablation_id = 0;
 }
 
-random_logo(validation_id)
+random_logo(ablation_id)
 
 /* Set timer so that the user is able to rate the timing of the animation */
 let timeleft = 6;
